@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" href="./public/style/default.css">
+    <title>Document</title>
+
+
+    <!-- FLATICONS -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <!-- GOOGLE ICONS -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <!-- SWIPER.JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- MOMENT -->
+    <script src="./public/js/moment.js"></script>
+
+</head>
+<body class="jajaja-body" onload="windowNotMuted()">
+    <div id="preloader">
+        <div class="jajaja-preloader-img">
+            <img src="./public/img/png/SUN.png" alt="" srcset="">
+        </div>
+        <input type="range" class="" id="progressbar" min="0" max="100" value="0" step="1">
+        <p id="jajaja-preloader-text">Loading Buena Onda</p>
+    </div>
+    <section class="jajaja-section-main">   
+        <header class="jajaja-header" id="jajaja-header">
+            <nav class="navbar">
+                <svg class="logo" viewBox="0 0 278 95" fill="rgb(215, 37, 71)" xmlns="http://www.w3.org/2000/svg" style="fill: rgb( 230 ,  51 , 42)">
+                    <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
+                    <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
+                    <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
+                    <path d="M179.7 19.3C178.8 8.5 169.7 0 158.7 0C147.1 0 137.7 9.4 137.6 21V21.1V93.1H156.9V64.3H160.5V93.1H179.8V21.1C179.8 20.5 179.8 19.9 179.7 19.3ZM156.9 21.1C156.9 20.1 157.7 19.3 158.7 19.3C159.7 19.3 160.5 20.1 160.5 21.1V44.4H156.9V21.1V21.1Z"></path>
+                    <path d="M87.9999 19.3C87.0999 8.5 77.9999 0 66.9999 0C55.3999 0 45.9999 9.4 45.8999 21V21.1V93.1H65.1999V64.3H68.7999V93.1H88.0999V21.1C88.0999 20.5 88.0999 19.9 87.9999 19.3ZM65.1999 21.1C65.1999 20.1 65.9999 19.3 66.9999 19.3C67.9999 19.3 68.7999 20.1 68.7999 21.1V44.4H65.1999V21.1Z"></path>
+                    <path d="M271.4 19.3C270.5 8.5 261.4 0 250.4 0C238.8 0 229.4 9.4 229.3 21V21.1V93.1H248.6V64.3H252.2V93.1H271.5V21.1C271.5 20.5 271.5 19.9 271.4 19.3ZM248.6 21.1C248.6 20.1 249.4 19.3 250.4 19.3C251.4 19.3 252.2 20.1 252.2 21.1V44.4H248.6V21.1V21.1Z"></path>
+                    <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
+                </svg>
+                <ul class="nav-items">
+                  <li><a href="#" onclick="openWrapper()">Home</a></li>
+                  <li><a href="#" id="jajaja-volume" onclick="openVolumeControler()">Volume</a>
+                    <div class="volume-control">
+                        <input type="range" min="0" max="1" step="0.02" value="1" id="volume-slider">
+                        <a href="#" onclick="closeVolumeControler()">&times;</p>
+                    </div></li>
+                  <li><a class="fullscreen-btn" href="#">Fullscreen</a></li>
+                  <li><a href="#jajaja-section-txt-1">Bio</a></li>
+                  <li><a href="#" onclick="triggerContacts()" >Contact</a></li>
+                  <div class="jajaja-nav-hour-container ">
+                    <a id="jajaja-nav-hour" class="nav-link text-primary current-date">Hour<span></a>
+                </div>
+                </ul>
+                <input type="checkbox" id="hamburger-input" class="burger-shower" />
+                <label id="hamburger-menu" for="hamburger-input">
+                <nav id="sidebar-menu">
+                    <h3>JAJAJA</h3>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link text-primary jajaja-mute">Volume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary">Fullscreen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="to-next-section nav-link text-primary"  href="#jajaja-section-2" id="jajaja-bio">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-primary">Contact</a>
+                        </li>
+                        </ul>
+                </nav>
+                </label>
+
+                <div class="overlay"></div>
+              </nav>   
+          </header>
+
+        <main class="jajaja-section-1">
+            <div class="row">
+                <div class="jajaja-main-modal-container col-md-9">
+                    <div class="wrapper jajaja-wrapper popup jajaja-draggable" onclick="bringToFront(this)">
+                        <header class="jajaja-modal-header">
+                            <div class="drag-handle"></div>
+                            <div class="jajaja-header-btns">
+                                <span class="jajaja-header-circle close-btn" onclick="closeWrapper()"></span>
+                                <span class="jajaja-header-circle"></span>
+                                <span class="jajaja-header-circle"></span>
+                            </div>
+                            <div class="line-container">
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                              </div>
+                        </header>
+                        <div class="content">
+                        <div class="icon">                   
+                            <svg class="svg-jajaja" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(230, 51, 42);">
+                                <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
+                                <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
+                                <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
+                                <path d="M179.7 19.3C178.8 8.5 169.7 0 158.7 0C147.1 0 137.7 9.4 137.6 21V21.1V93.1H156.9V64.3H160.5V93.1H179.8V21.1C179.8 20.5 179.8 19.9 179.7 19.3ZM156.9 21.1C156.9 20.1 157.7 19.3 158.7 19.3C159.7 19.3 160.5 20.1 160.5 21.1V44.4H156.9V21.1V21.1Z"></path>
+                                <path d="M87.9999 19.3C87.0999 8.5 77.9999 0 66.9999 0C55.3999 0 45.9999 9.4 45.8999 21V21.1V93.1H65.1999V64.3H68.7999V93.1H88.0999V21.1C88.0999 20.5 88.0999 19.9 87.9999 19.3ZM65.1999 21.1C65.1999 20.1 65.9999 19.3 66.9999 19.3C67.9999 19.3 68.7999 20.1 68.7999 21.1V44.4H65.1999V21.1Z"></path>
+                                <path d="M271.4 19.3C270.5 8.5 261.4 0 250.4 0C238.8 0 229.4 9.4 229.3 21V21.1V93.1H248.6V64.3H252.2V93.1H271.5V21.1C271.5 20.5 271.5 19.9 271.4 19.3ZM248.6 21.1C248.6 20.1 249.4 19.3 250.4 19.3C251.4 19.3 252.2 20.1 252.2 21.1V44.4H248.6V21.1V21.1Z"></path>
+                                <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="jajaja-wrapper-content">
+                            <p>Mexique, une rue, début de soirée. Ecoute, ce son c’est la vie. Un son qui vient du cœur davantage que de l’esprit. Un ami. Deux amis. Toute la rue en folie. Un bruit qui ne triche pas, que l’on n’arrête pas. Débordant. Imprévisible. Extravagant. Ici, on mange comme on s’aime. A plusieurs, à pas d’heure. Tacos, Tequilla, Tostadas, y mucho mas. Ici c’est comme là-bas, c’est JAJAJA. La buena onda mexicana.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jajaja-desktop-icons col-md-3">
+                    <div class="jajaja-icons">
+                        <div class="jajaja-icon">
+                            <div class="jajaja-icon-img" onmousedown="dragElement(this)">
+                                <div onclick='openRecipeModal()' class="jajaja-icon-img-container" id="open-modal-recipe">
+                                    <img  class="jajaja-dektop-icon" src="./public/img/PIXELS/desktop-icons/resized/tacos.png" alt="Tacos">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-tacos-text" ><p class="jajaja-icon-name-text">RECETTES</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jajaja-icon"onmousedown="dragElement(this)">
+                            <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
+                                <div class="jajaja-icon-img-container">
+                                    <img class="jajaja-dektop-icon" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/resized/cactus.png" alt="Cactus">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">TAQUERIA</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jajaja-icon" id="open-modal-pacman"onmousedown="dragElement(this)">
+                            <div class="jajaja-icon-img">
+                                <div onclick="openPopupMusic()"  class="jajaja-icon-img-container">
+                                    <img class="jajaja-dektop-icon"  src="./public/img/PIXELS/desktop-icons/resized/gethoblaster.png" alt="ghettoblaster">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-ghettoblaster-text"><p class="jajaja-icon-name-text">PLAYLIST</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jajaja-icon">
+                            <div class="jajaja-icon-img" onmousedown="dragElement(this)">
+                                <div class="jajaja-icon-img-container volume"  onclick="openSocialModal()">
+                                    <img class="jajaja-dektop-icon" src="./public/img/PIXELS/desktop-icons/resized/avocado.png" alt="Cactus">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-avocat-text"><p class="jajaja-icon-name-text">INSTAGRAM</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jajaja-icon" id="jajaja-icon-1" onmousedown="dragElement(this)">
+                            <div class="jajaja-icon-img">
+                                <div class="jajaja-icon-img-container" onclick="openRecipeHit()">
+                                    <img class="jajaja-dektop-icon" id="jajaja-icon-bottle" src="./public/img/PIXELS/desktop-icons/resized/sauce.png" alt="Sauce">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">HOW IT WORKS</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-recipe-wrapper popup jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)">
+                <header class="modal-recipe-header jajaja-modal-header">
+                    <div class="drag-handle"></div>
+
+                    <div class="jajaja-header-btns">
+                        <span onclick="closeRecipeModal()" class="jajaja-header-circle modal-recipe-close-btn"></span>
+                        <span class="jajaja-header-circle"></span>
+                        <span class="jajaja-header-circle"></span>
+                    </div>
+
+                    <div class="line-container">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                      </div>
+                    
+                </header>
+                <div class="modal-recipe-content  jajaja-modal-content">
+                <iframe src="././public/recipes/alpastore.html" frameborder="0"></iframe>
+                </div>
+
+            <div class="modal-recipe-howto-wrapper">
+                <span class="modal-recipe-howto-closer">&times;</span>
+                <h3>How it works ?</h3>
+            </div>
+            </div>
+
+
+    
+            <div class="popup modal-social-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)">
+                <header class="modal-social-header jajaja-modal-header">
+                    <div class="drag-handle"></div>
+                    <div class="jajaja-header-btns">
+                        <span onclick="closeInstaModal()" class="jajaja-header-circle modal-insta-close-btn"></span>
+                        <span class="jajaja-header-circle"></span>
+                        <span class="jajaja-header-circle"></span>
+                    </div>
+
+                    <div class="line-container">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                      </div>
+                </header>
+                <div class="modal-social-content jajaja-modal-content">
+                <iframe src="./instafeed.html" frameborder="0" sandbox="allow-forms allow-scripts"></iframe>
+                </div>
+                <div class="modal-social-footer">
+    
+                </div>
+            </div>
+
+
+    
+            <div class="popup modal-all-recipe-wrapper jajaja-wrapper" onclick="bringToFront(this)">
+                <header class="modal-all-recipe-header jajaja-modal-header">
+                    <div class="drag-handle"></div>
+                    <span class="modal-all-recipe-close-btn jajaja-modal-closer">&times;</span>
+                    <h1 class=" modal-all-recipe-title">ALL RECIPES</h1>
+                </header>
+                <div class="modal-all-recipe-content jajaja-modal-content">
+                <iframe src="./all-recipes.html" frameborder="0"></iframe>
+                </div>
+            </div>
+    </main>
+</section>
+
+
+    <!-- JAJAJA SECTIONS TEXT -->
+    <aside>
+        <div class="close-btn">
+            <div class="close-container"><a href="#jajaja-header"> &times;</a></div>
+        </div>
+    <!-- SECTION 1) -->
+
+        <section class="jajaja-section-txt" id="jajaja-section-txt-1">
+            <div class="container">
+                <div class="row jajaja-section-txt-title">
+                    <h1 class="">JAJAJA, LA BUENA ONDA MEXICANA</h1>
+                </div>
+                <div class="row jajaja-section-txt-content">
+                    <div class="col-lg-8 text-align">
+                        <p>JAJAJA! CE SON, C’EST LA VIE.
+                            LA BUENA ONDA QUI COULE DANS LE SANG DU PAYS.<br><br>
+                            
+                            “BARRIGA LLENA, CORAZÓN CONTENTO” *<br><br>
+                            
+                            ICI, ON MANGE, ON VIT, ON RIT.<br>
+                            (TRÈS) FORT, À PLUSIEURS, À PAS D’HEURE.<br><br>
+                            
+                            TACOS, TEQUILA, TOSTADAS, <br><br>
+                            
+                            ICI COMME LA BAS C’EST  <br>
+                            <svg class="" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(215, 37, 71);">
+                                <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
+                                <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
+                                <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
+                                <path d="M179.7 19.3C178.8 8.5 169.7 0 158.7 0C147.1 0 137.7 9.4 137.6 21V21.1V93.1H156.9V64.3H160.5V93.1H179.8V21.1C179.8 20.5 179.8 19.9 179.7 19.3ZM156.9 21.1C156.9 20.1 157.7 19.3 158.7 19.3C159.7 19.3 160.5 20.1 160.5 21.1V44.4H156.9V21.1V21.1Z"></path>
+                                <path d="M87.9999 19.3C87.0999 8.5 77.9999 0 66.9999 0C55.3999 0 45.9999 9.4 45.8999 21V21.1V93.1H65.1999V64.3H68.7999V93.1H88.0999V21.1C88.0999 20.5 88.0999 19.9 87.9999 19.3ZM65.1999 21.1C65.1999 20.1 65.9999 19.3 66.9999 19.3C67.9999 19.3 68.7999 20.1 68.7999 21.1V44.4H65.1999V21.1Z"></path>
+                                <path d="M271.4 19.3C270.5 8.5 261.4 0 250.4 0C238.8 0 229.4 9.4 229.3 21V21.1V93.1H248.6V64.3H252.2V93.1H271.5V21.1C271.5 20.5 271.5 19.9 271.4 19.3ZM248.6 21.1C248.6 20.1 249.4 19.3 250.4 19.3C251.4 19.3 252.2 20.1 252.2 21.1V44.4H248.6V21.1V21.1Z"></path>
+                                <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
+                            </svg>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="col-md-6 jajaja-swiper-slide-left">
+                            <img class="" src="./public/img/BG/JAJAJA-BG-RED.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row jajaja-section-next">
+                    <a href="#jajaja-section-txt-2"><i class="fi fi-rr-angle-circle-down" id="jajaja-1-2" ></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 2) -->
+
+        <section class="jajaja-section-txt" id="jajaja-section-txt-2">
+                <div class="jajaja-section-prev">
+                    <a href="#jajaja-section-txt-1" id="jajaja-2-1"><i class="fi fi-rr-angle-circle-up" ></i></a>
+                </div>
+            <div class="container">
+                <div class="row jajaja-section-txt-title mb-5">
+                    <h1>NOTRE HISTOIRE</h1>
+                </div>
+                <div class="row jajaja-section-txt-content">
+                    <div class="col-lg-4">
+                        <img src="./public/img/BG/JAJAJA-BG-BLUE.png" alt="" srcset="">
+                    </div>
+                    <div class="col-lg-7">
+                            <p>
+                                    « J’ai fait deux rencontres majeures dans ma vie : <br>
+                                    Il y a 10 ans, j’ai rencontré Olivier et nous avons fondé Les Niçois (restaurant, bar, pétanque, épicerie). Il y a quinze ans, j’ai passé deux des plus belles années de ma vie, au Mexique.<br><br>
+    
+                                    C’est un pays que j’aime par-dessus tout, car j’y ai retrouvé une version caliente de mon Sud. La richesse et la diversité de la cuisine et de l’art de vivre à la mexicaine est indescriptible, elle change d’une région à l’autre, elle évolue au fil du temps, et des gens que l’on croise.<br>
+    
+                                    Ce mood et cette cuisine sont trop peu connues ici.<br><br>
+                                    Il y a 1 an, nous avons lancé l’aventure JAJAJA. <br><br>
+    
+                                    Au commencement, une taqueria mobile que l’on sortait en festival pour distribuer tacos al Pastor et autres Baja de camaron, puis le tout s’est transformé en un lieu sédentaire situé dans le 11ème avec aux commandes Andres mon ami Oaxaqueño. <br>
+                                    Là bas se côtoient tosti esquites, trompos de al Pastor et une sélection de Mezcals et cocteles tout droit issu de mon top 10 Mexicain. <br>
+                                    Et en bons épiciers, on a sorti nos 9 meilleurs produits dans des packs individuels pour apporter le Mexique chez le plus grand nombre. <br><br> 
+    
+                                    Le fil rouge : VITAMINA-T (tacos, tostadas, tequila, tortas).<br>
+                                    Mon allié : mon « compadre » Olivier.<br>
+                                    Notre chef : mon ami Andres, de Oaxaca à Paris depuis 1 mois pour tenir le restaurant. <br><br>
+    
+                                    Enchanté, Encantando »
+                            </p>
+                    </div>
+                </div>
+                <div class="jajaja-section-next">
+                    <a href="#jajaja-section-txt-3"><i class="fi fi-rr-angle-circle-down" id="jajaja-2-3"></i></a>
+                </div>
+            </div>
+        </section>
+        
+                <!-- SECTION 3) -->
+
+                <section class="jajaja-section-txt" id="jajaja-section-txt-3">
+                    <div class="jajaja-section-prev">
+                        <a href="#jajaja-section-txt-2" id="jajaja-3-2"><i class="fi fi-rr-angle-circle-up" ></i></a>
+                    </div>
+                <div class="container">
+                    <div class="row jajaja-section-txt-title">
+                        <h1>LA TAQUERIA</h1>
+                    </div>
+                    <div class="row jajaja-section-txt-content">
+                            <div class=" col-lg-6 jajaja-bg-color-block pb-5 text-center">
+                                <h2 class="jajaja-fts-2">What we do </h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
+                            </div>
+                            <div class="col-lg-6 jajaja-swiper-slide-mid pb-5 text-center">
+                                <h2 class="">How we are</h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
+                            </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-7">
+                            <img class="" src="./public/img/BG/bg-kodak.png" alt="" srcset="">
+                        </div>
+                        <div class="col-md-5">
+                            <img class='jajaja-img-max-width'src="./public/img/BG/JAJAJA-BG-ORANGE.png" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="jajaja-section-next">
+                        <i class="fi fi-rr-angle-circle-down"></i>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+    <!-- POPUP PACMAN -->
+
+    <div class="popup-pacman popup popup-pacman-wrapper box" onclick="bringToFront(this)">
+        <header class="modal-pacman-header">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span class="jajaja-header-circle close-btn" id="pacman-close-btn"></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+        </header>
+        <div class="jajaja-popup-iframe">
+            <iframe src="./public/pacman/pacman.html" frameborder="0"></iframe>
+        </div>
+    </div>  
+
+    <!-- POPUP CONTACT -->
+    <div class="popup-contact popup-contact-wrapper popup jajaja-draggable box" onclick="bringToFront(this)">
+        <header class="modal-contact-header">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span onclick="closePopupContact()" class="jajaja-header-circle close-btn" id="contact-close-btn" ></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+        </header>
+            <div class="jajaja-contact-content">
+                <h2>PARTAGE TA BUENA ONDA !!</h2>
+                <form name="contactForm" onsubmit="return validateForm()" method="post">
+                    <input type="text" id="name" name="name" placeholder="nom et prenom"><br><br>
+            
+                    <input type="email" id="email" name="email" placeholder="email"><br><br>
+            
+                    <textarea id="message" name="message" rows="5" cols="30" placeholder="votre message"></textarea><br><br>
+            
+                    <input class="jajaja-input-btn" type="submit" value="Envoyer">
+                </form>
+            </div>
+    </div>  
+
+    <div class="popup-contacts popup popup-contacts-wrappe jajaja-draggable box" onclick="bringToFront(this)">
+        <header class="modal-contacts-header">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span class="jajaja-header-circle close-btn" id="contacts-close-btn" onclick="closePopupContacts()"></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+        </header>
+            <div class="jajaja-contacts-content">
+                <div class="jajaja-contacts-section">    
+                    <a href="#"><img src="./public/img/instagram.svg" alt=""><p>Notre instagram</p></a>
+                </div>
+                <div class="jajaja-contacts-section">
+                    <a href="#" onclick="contactTrigger()" id="#jajaja-mail-trigger"><img src="./public/img/envelope.svg" alt=""><p>Contactez-nous</p></a>
+                </div>
+            </div>
+    </div>  
+
+    <!-- POPUP MUSIC -->
+
+    <div class="popup-music popup-music-wrapper jajaja-draggable box popup" onclick="bringToFront(this)" >
+        <header class="modal-music-header">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span class="jajaja-header-circle close-btn" id="music-close-btn" onclick="closePopupMusic()"></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+            <div class="line-container">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
+        </header>
+            <div class="jajaja-music-content">
+                <h2>JAJAJA FM</h2>
+                <div>
+                    <canvas id="audioCanvas"></canvas>
+
+                    <audio id="audioPlayer">
+                      <source id="audioSource" src="./public/audio/Mexican 2.wav" type="audio/mpeg">
+                    </audio>
+                    <br>
+                    <div class="jajaja-track-infos">
+                        <div class="jajaja-track-time">
+                            00.00 / 00.00
+                        </div>
+                        <div class="jajaja-track-info">
+                            <p id="jajaja-track-name">Track Name/track artist</p>
+                            <p id="jajaja-track-playlist">Track playlist</p>
+                        </div>
+
+                    </div>
+                    <div class="jajaja-btn-audioplayer">
+                        <div class="jajaja-controler-btn-group">
+                            <button id="prevButton" class="jajaja-btn-controler" onclick="previousTrack()"><i class="fi fi-rr-rewind"></i></button>
+                            <button id="playPauseButton" onclick="togglePlay()"><i class="fi fi-rr-pause"></i></button>
+                            <button id="nextButton" onclick="nextTrack()"><i class="fi fi-rr-forward"></i></button>
+                        </div>
+                        <div class="jajaja-mute-btn-group">
+                            <button id="mute-btn"onclick="toggleMute()"><i class="fi fi-rr-volume"></i></button>
+                            <button onclick="shareAudio()"><i class="fi fi-rr-share-square"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="jajaja-playlists-list">
+                        <div class="jajaja-playlist-item">
+                            <p>Playlist</p>
+                        </div>
+                        <div class="jajaja-playlist-item">
+                            <p>Playlist</p>
+                        </div>
+                        <div class="jajaja-playlist-item">
+                            <p>Playlist</p>
+                        </div>
+                        <div class="jajaja-playlist-item">
+                            <p>Playlist</p>
+                        </div>
+                        <div class="jajaja-playlist-item">
+                            <p>Playlist</p>
+                        </div>
+                        <div class="jajaja-playlist-item">
+                            <p>Playlist</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+    </div>  
+
+    <!-- /POPUP HOW IT WORKS -->
+
+    <div class="popup jajaja-draggable box" id="popup-hit" onclick="bringToFront(this)">
+        <header class="popup-header" id="header-hit">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span class="jajaja-header-circle close-btn" id="hit-close-btn" onclick="closeRecipeHit()"></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+            <div class="line-container">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
+        </header>
+        <div class="popup-content">
+            <h2>How it works</h2>
+        </div>
+    </div>
+
+    <!-- POPUP RIGHT CLICK BIS -->
+
+    <div class="box popup" id="popup-tools"onclick='bringToFront(this)'>
+        <header  id="popup-tools-header">
+            <a id='tools-close-btn' href="#" >&times;</a>
+        </header>
+        <div class="popup-content">
+            <div id="popup-tools-icons">
+                <div id="jajaja-trigger-popup-tools-clock" class="popup-tools-icon"><img src="./public/img/PIXELS/clock.png" alt=""></div>
+                <div class="popup-tools-icon" id="jajaja-trigger-popup-tools-bg"><img src="./public/img/PIXELS/crayon.png" alt="" onclick="triggerBagroundPopup()"></div>
+                <div class="popup-tools-icon"><img src="./public/img/PIXELS/ecrou.png" alt=""></div>
+                <div class="popup-tools-icon" onclick="openPopupMusic()" ><img src="./public/img/PIXELS/ghettoblaster-big-png.png" alt=""></div>
+                <div class="popup-tools-icon">...
+                </div>
+            </div>
+        </div>
+        <div class="popup-background box popup jajaja-draggable">
+            <header class="modal-bg-header jajaja-popup-header">
+                <div class="drag-handle"></div>
+                <div class="jajaja-header-btns">
+                    <span class="jajaja-header-circle" onclick="closePopupToolsBg()" id="modal-bg-close"></span>
+                    <span class="jajaja-header-circle"></span>
+                    <span class="jajaja-header-circle"></span>
+                </div>
+                <div class="line-container">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                  </div>
+            </header>
+            <div class="popup popup-container popup-background-container">
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-1">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-3">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-4">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-5">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="jajaja-popup-menu"></div>
+        </div>
+        <div class="box popup" id="popup-clock" onclick='bringToFront(this)'>
+            <div  id="popup-clock-header">
+                <a id='popup-clock-close-btn' onclick="closePopupToolsClock()" href="#" >&times;</a>
+            </div>
+            <div class="popup-content">
+                <div id="popup-clock-icons">
+                    <div class="popup-clock-icon" onclick="afficherHeureFrance()"><img src="./public/img/PIXELS/france.png" alt=""></div>
+                    <div class="popup-clock-icon" onclick="afficherHeureMexique()"><img src="./public/img/PIXELS/mexico.png" alt=""></div>
+                    <div class="popup-clock-icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+    
+
+    <script type="text/javascript" src="./public/js/modal.js" async></script>
+    <script type="text/javascript"  src="./public/js/app.js" async></script>
+    <script type="text/javascript"  src="./public/js/popup.js" async></script>
+    <script type="text/javascript" src="./public/js/colors.js" async></script>
+    <script type="text/javascript" src="./public/js/nav.js" async></script>
+    <script type="text/javascript" src="./public/js/caroussel.js" async></script>
+    <script src="./public/js/features.js"></script>
+    <script type="text/javascript" src="./public/js/music.js" async></script>
+    <script>
+
+                // CHANGE BACKGROUND 
+
+const bg1 = document.querySelector('#jajaja-bg-1');
+const bg2 = document.querySelector('#jajaja-bg-2');
+const bg3 = document.querySelector('#jajaja-bg-3');
+const bg4 = document.querySelector('#jajaja-bg-4');
+const bg5 = document.querySelector('#jajaja-bg-5');
+const bg6 = document.querySelector('#jajaja-bg-6');
+const bg7 = document.querySelector('#jajaja-bg-7');
+
+
+const jajajaSection = document.querySelector('.jajaja-section-1')
+
+bg1.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-1');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-7');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+bg2.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-2');
+    jajajaSection.classList.remove('bg-1','bg-3','bg-4','bg-5','bg-6','bg-7');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+bg3.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-3');
+    jajajaSection.classList.remove('bg-2','bg-1','bg-4','bg-5','bg-6','bg-7');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg4.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-4');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-1','bg-5','bg-6','bg-7');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg5.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-5');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-1','bg-6','bg-7');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.add('wrapper-cover');
+
+
+});
+
+bg6.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-6');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1','bg-7');
+    wrapper.classList.add('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg7.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-7');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1','bg-6');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+
+
+const popups = document.querySelectorAll('.jajaja-draggable');
+
+popups.forEach(popup => {
+  const handle = popup.querySelector('.drag-handle');
+  handle.addEventListener('mousedown', mouseDown);
+});
+
+function mouseDown(e) {
+  const handle = e.target;
+  const popup = handle.parentNode.parentNode;
+
+  const startX = e.clientX - popup.offsetLeft;
+  const startY = e.clientY - popup.offsetTop;
+  
+  // On ajoute des écouteurs d'événement sur la page pour suivre le mouvement de la souris
+  document.addEventListener('mousemove', mouseMove);
+  document.addEventListener('mouseup', mouseUp);
+  
+  // Fonction appelée lorsqu'on bouge la souris
+  function mouseMove(e) {
+    // On calcule la nouvelle position de la popup
+    const newLeft = e.clientX - startX;
+    const newTop = e.clientY - startY;
+    
+    // On applique la nouvelle position à la popup
+    popup.style.left = newLeft + 'px';
+    popup.style.top = newTop + 'px';
+  }
+
+
+
+  
+  // Fonction appelée lorsqu'on relâche le clic de souris
+  function mouseUp() {
+    // On supprime les écouteurs d'événement sur la page
+    document.removeEventListener('mousemove', mouseMove);
+    document.removeEventListener('mouseup', mouseUp);
+  }
+}
+
+const preloader = document.getElementById('preloader');
+const images = preloader.getElementsByTagName('img');
+const delay = 200; // délai en millisecondes entre chaque image    
+
+
+
+
+
+
+
+        
+
+    </script>
+    <script>
+        // Sélectionnez toutes les popups de la page
+const popupss = document.querySelectorAll('.popup');
+
+// Ajoutez un gestionnaire d'événement à chaque popup
+popups.forEach(popup => {
+  popup.addEventListener('click', () => {
+    // Définissez un z-index élevé pour la popup cliquée
+    popup.style.zIndex = getHighestZIndex() + 1;
+  });
+});
+
+// Fonction pour obtenir le z-index le plus élevé parmi toutes les popups
+function getHighestZIndex() {
+  let highestIndex = 0;
+
+  // Parcourez toutes les popups et vérifiez leur z-index actuel
+  popups.forEach(popup => {
+    const zIndex = parseInt(window.getComputedStyle(popup).zIndex);
+
+    // Si le z-index est supérieur à celui actuellement stocké, mettez à jour la valeur
+    if (zIndex > highestIndex) {
+      highestIndex = zIndex;
+    }
+  });
+
+  return highestIndex;
+}
+
+    </script>
+
+
+</body>
+</html>

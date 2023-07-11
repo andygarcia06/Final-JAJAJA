@@ -1,0 +1,362 @@
+<!-- RIGHT CLICK POPUP -->
+
+<div class="popup-background">
+    <header class="modal-bg-header jajaja-popup-header">
+        <div class="jajaja-header-btns">
+            <span class="jajaja-header-circle" id="modal-bg-close"></span>
+            <span class="jajaja-header-circle"></span>
+            <span class="jajaja-header-circle"></span>
+        </div>
+        <div class="jajaja-header-close-btn close-background-2">&times;</div>
+    </header>
+    <div class="popup-container popup-background-container">
+        <div class="row">
+            <div class="jajaja-background">
+                <div class="jajaja-background-container" id="jajaja-bg-1">
+                </div>
+            </div>
+            <div class="jajaja-background">
+                <div class="jajaja-background-container" id="jajaja-bg-2">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jajaja-background">
+                <div class="jajaja-background-container" id="jajaja-bg-3">
+                </div>
+            </div>
+            <div class="jajaja-background">
+                <div class="jajaja-background-container" id="jajaja-bg-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jajaja-background">
+                <div class="jajaja-background-container" id="jajaja-bg-5">
+                </div>
+            </div>
+            <div class="jajaja-background">
+                <div class="jajaja-background-container" id="jajaja-bg-6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jajaja-popup-menu"></div>
+</div>
+<div class="popup-clock">
+    <header class="modal-popup-header jajaja-popup-header">
+        <div class="jajaja-header-btns">
+            <span class="jajaja-header-circle" id="modal-popup-close"></span>
+            <span class="jajaja-header-circle"></span>
+            <span class="jajaja-header-circle"></span>
+        </div>
+        <div class="jajaja-header-close-btn">&times;</div>
+
+    </header>
+    <div class="popup-container">
+        <div><h3>CLock</h3></div>
+        <div class="row">
+            <div class="jajaja-clock">
+                <div class="jajaja-clock-container">
+                    <button type="button" id="jajaja-mexico-hour"><h5>MEXICO</h5></button>
+                </div>
+            </div>
+            <div class="jajaja-clock">
+                <div class="jajaja-clock-container" >
+                    <button type="button" class="jajaja-france-hour"><h5>FRANCE</h5></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jajaja-popup-menu"></div>
+</div>
+</div>
+</div>
+
+
+
+SECTION 2 3 4
+
+<section class="jajaja-section-2 container" id="jajaja-section-2">
+    <div class="jajaja-second-section">
+        <a class="to-next-section jajaja-close-section" href="#jajaja-header">&times;</a>
+    </div>
+    <!-- Slider main container -->
+    <div class="swiper swiper-jajaja">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide jajaja-swiper">
+            <section class="container jajaja-swiper-slide" >
+                <div class="row" id="jajaja-swiper-slide-1">
+                    <h1 class="jajaja-fts-10">JAJAJA, LA BUENA ONDA MEXICANA</h1>
+                    <div class="col-md-6 jajaja-swiper-slide-left">
+                        <img class="" src="./public/img/BG/bg-red.png" alt="" srcset="">
+                    </div>
+                    <div class="col-md-6 jajaja-swiper-slide-right">
+                        <p>JAJAJA! CE SON, C’EST LA VIE.
+                            LA BUENA ONDA QUI COULE DANS LE SANG DU PAYS.<br><br>
+                            
+                            “BARRIGA LLENA, CORAZÓN CONTENTO” *<br><br>
+                            
+                            ICI, ON MANGE, ON VIT, ON RIT.<br>
+                            (TRÈS) FORT, À PLUSIEURS, À PAS D’HEURE.<br><br>
+                            
+                            TACOS, TEQUILA, TOSTADAS, <br><br>
+                            
+                            ICI COMME LA BAS C’EST  <br>
+                            <svg class="" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(215, 37, 71);">
+                                <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
+                                <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
+                                <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
+                                <path d="M179.7 19.3C178.8 8.5 169.7 0 158.7 0C147.1 0 137.7 9.4 137.6 21V21.1V93.1H156.9V64.3H160.5V93.1H179.8V21.1C179.8 20.5 179.8 19.9 179.7 19.3ZM156.9 21.1C156.9 20.1 157.7 19.3 158.7 19.3C159.7 19.3 160.5 20.1 160.5 21.1V44.4H156.9V21.1V21.1Z"></path>
+                                <path d="M87.9999 19.3C87.0999 8.5 77.9999 0 66.9999 0C55.3999 0 45.9999 9.4 45.8999 21V21.1V93.1H65.1999V64.3H68.7999V93.1H88.0999V21.1C88.0999 20.5 88.0999 19.9 87.9999 19.3ZM65.1999 21.1C65.1999 20.1 65.9999 19.3 66.9999 19.3C67.9999 19.3 68.7999 20.1 68.7999 21.1V44.4H65.1999V21.1Z"></path>
+                                <path d="M271.4 19.3C270.5 8.5 261.4 0 250.4 0C238.8 0 229.4 9.4 229.3 21V21.1V93.1H248.6V64.3H252.2V93.1H271.5V21.1C271.5 20.5 271.5 19.9 271.4 19.3ZM248.6 21.1C248.6 20.1 249.4 19.3 250.4 19.3C251.4 19.3 252.2 20.1 252.2 21.1V44.4H248.6V21.1V21.1Z"></path>
+                                <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="swiper-slide" id="jajaja-swiper-slide-2">
+            <section class="container jajaja-swiper-slide" >
+                <div class="row">
+                    <h2 class="mb-5">NOTRE HISTOIRE</h2>
+                    <div class="col-md-5 mt-5">
+                        <p>
+                                « J’ai fait deux rencontres majeures dans ma vie : <br>
+                                Il y a 10 ans, j’ai rencontré Olivier et nous avons fondé Les Niçois (restaurant, bar, pétanque, épicerie). Il y a quinze ans, j’ai passé deux des plus belles années de ma vie, au Mexique.<br><br>
+
+                                C’est un pays que j’aime par-dessus tout, car j’y ai retrouvé une version caliente de mon Sud. La richesse et la diversité de la cuisine et de l’art de vivre à la mexicaine est indescriptible, elle change d’une région à l’autre, elle évolue au fil du temps, et des gens que l’on croise.<br>
+
+                                Ce mood et cette cuisine sont trop peu connues ici.<br><br>
+                                Il y a 1 an, nous avons lancé l’aventure JAJAJA. <br><br>
+
+                                Au commencement, une taqueria mobile que l’on sortait en festival pour distribuer tacos al Pastor et autres Baja de camaron, puis le tout s’est transformé en un lieu sédentaire situé dans le 11ème avec aux commandes Andres mon ami Oaxaqueño. <br>
+                                Là bas se côtoient tosti esquites, trompos de al Pastor et une sélection de Mezcals et cocteles tout droit issu de mon top 10 Mexicain. <br>
+                                Et en bons épiciers, on a sorti nos 9 meilleurs produits dans des packs individuels pour apporter le Mexique chez le plus grand nombre. <br><br> 
+
+                                Le fil rouge : VITAMINA-T (tacos, tostadas, tequila, tortas).<br>
+                                Mon allié : mon « compadre » Olivier.<br>
+                                Notre chef : mon ami Andres, de Oaxaca à Paris depuis 1 mois pour tenir le restaurant. <br><br>
+
+                                Enchanté, Encantando »
+                        </p>
+                    </div>
+                    <div class="col-md-7">
+                        <img src="./public/img/BG/bg-blue.png" alt="" srcset="">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="swiper-slide" id="jajaja-swiper-slide-3">
+            <section class="jajaja-swiper-slide" id="">
+                <h1 class="jajaja-fts-2">La Taqueria</h1>
+                <div class="row jajaja-swiper-3-section">
+                    <div class="jajaja-swiper-slide-mid">
+                        <div class="jajaja-bg-color-block pb-5 text-center">
+                            <h2 class="jajaja-fts-2">What we do </h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
+                        </div>
+                    </div>
+                    <div class="jajaja-swiper-slide-mid pb-5 text-center">
+                        <h2 class="">How we are</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
+                    </div>
+                </div>
+                <div class="row jajaja-img-container">
+                    <div class="col-md-7">
+                        <img class="" src="./public/img/BG/bg-kodak.png" alt="" srcset="">
+                    </div>
+                    <div class="col-md-5">
+                        <img class='jajaja-img-max-width'src="./public/img/BG/bg-orange.png" alt="" srcset="">
+                    </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+            </section>
+        </div>
+        <!-- <div class="swiper-slide" id="jajaja-swiper-slide-3">
+            <section class="container jajaja-swiper-slide" id="">
+                <h1 class="jajaja-fts-2">La Taqueria</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class='boxed-img'src="./public/img/BG/Capture d’écran 2023-03-27 à 15.23.06.png" alt="">
+                    </div>
+                    <div class="col-md-6">                          <img src="./public/img/BG/Capture d’écran 2023-03-27 à 15.23.17.png" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7"> 
+                        <h2 class="jajaja-fts-2">How we are</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
+                    </div>
+                    <div class="col-md-5 jajaja-bg-color-block">
+                        <h2 class="jajaja-fts-2">What we do </h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error maiores numquam delectus quae perspiciatis vel!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 jajaja-bg-color-block">
+                        <h2>L'adresse</h2>
+                        <p>7 Rue Lacharrière - 75011 - PARIS <br>
+                            Du mercredi au samedi soir - 19h à 01h</p>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+        ...
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    
+        <!-- If we need navigation buttons
+        <div class="swiper-button-next txt-primary">Next</div>
+        <div class="swiper-button-prev txt-primary">Prev</div> -->
+    
+    </div>
+</section>
+
+// III- JAJAJA SECTION 2
+
+.jajaja-section-2{
+ height: 100vh;
+ color: #e63329 !important;
+ width: 100%;
+ overflow-y: scroll;
+
+
+
+
+ .jajaja-swiper{
+   margin: auto;
+ }
+
+ h1{
+   font-size: 280%;
+ }
+
+
+ h2,h3,h4,h5{
+   font-size: 180%;
+ }
+
+ p{
+   font-size: 80% ;
+   font-family: 'Helvetica Neue Bolderx2' ;
+ }
+}
+
+.jajaja-body{
+ background-color: rgb(255, 247, 199) !important;
+}
+
+.jajaja-swiper-slide{
+ padding: 0% 0 10% 0;
+
+ h1,h2,h3,h4,h5{
+   color: #e63329;
+ }
+
+ svg{
+   height: 20%;
+   width: 20%;
+ }
+
+ .jajaja-swiper-slide-right{
+   padding: 10% 5% 5% 5%;
+ }
+
+ #jajaja-swiper-slide-1{
+   display: flex;
+   flex-direction: row;
+   color: rgb(215, 37, 71) !important;
+
+   h1{
+     color: rgb(215, 37, 71) !important;
+   }
+
+
+ img{
+   max-width: 80%;
+   max-height: 80%;
+   position: relative;
+   left: 5rem;
+   top:5vh;
+ }
+ }
+
+
+
+ h1,h2,h3,h4,h5{
+   font-family: 'JAJAJA';
+   text-align: center;
+ }
+
+
+}
+
+#jajaja-swiper-slide-2{
+ color: rgb(215, 37, 71) !important;
+ h2{
+   font-size: 250%;
+   color: rgb(215, 37, 71) !important;
+ }
+
+ img{
+   max-width: 80%;
+   max-height: 80%;
+ }
+}
+
+#jajaja-swiper-slide-3{
+ h1,h2,h3,h4,h5{
+   color: rgb(238, 105, 28) !important;
+ }
+
+ .jajaja-img-max-width{
+   max-width: 95%;
+ }
+
+
+ .jajaja-img-max-height{
+   max-width: 99%;
+ }
+
+
+ color: rgb(238, 105, 28) !important;
+ .boxed-img{
+   max-width: 70%;
+ }
+
+
+ .jajaja-img-container{
+   margin-top: -1.5vh;
+ }
+
+
+ .jajaja-bg-color-block{
+   background-color: rgb(238, 105, 28);
+   color: rgb(255, 247, 199);
+   text-align: center;
+
+   h2{
+     color: rgb(255, 247, 199) !important;
+   }
+ }
+
+ .jajaja-swiper-3-section{
+   display: flex;
+   flex-direction: row;
+
+   .jajaja-swiper-slide-mid{
+     width: 50%;
+
+
+   }
+ }
+}
+
+
