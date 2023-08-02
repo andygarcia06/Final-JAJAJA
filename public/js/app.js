@@ -1,3 +1,7 @@
+// RELOAD PAGE
+
+
+
 // BRING TO FRONT
 
 function bringToFront(popup) {
@@ -334,16 +338,11 @@ function toggleMute() {
 
 
 function shareAudio() {
-    // URL de l'audio
     const audioUrl = audioSource.src;
-    // URL de partage pour Twitter
     const twitterShareUrl = "https://twitter.com/intent/tweet?text=Écoutez%20ce%20morceau%20!&url=" + encodeURIComponent(audioUrl);
-    // URL de partage pour Facebook
     const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(audioUrl);
 
-    // Ouvre une nouvelle fenêtre pour partager sur Twitter
     window.open(twitterShareUrl, "_blank", "width=550,height=420");
-    // Ouvre une nouvelle fenêtre pour partager sur Facebook
     window.open(facebookShareUrl, "_blank", "width=550,height=420");
   };
 
@@ -371,15 +370,13 @@ function drawWaveform() {
     canvasCtx.stroke();
     requestAnimationFrame(drawWaveform);
     }
-    
-    // Lance la visualisation d'onde sonore
-    drawWaveform();
+     drawWaveform();
 
     // MUTE/UNMUTE
 
 const muteAll = document.querySelector("#jajaja-volume");
 muteAll.addEventListener("click", function() {
-  setMute(!mediaElements[0].muted); // inverse la valeur du premier élément
+  setMute(!mediaElements[0].muted); // 
 });
 
 // MODAL RECIPE
@@ -401,47 +398,7 @@ function closeRecipeModal() {
 
 
 
-// HOUR
 
-const heureDiv = document.getElementById('jajaja-nav-hour');
-
-function afficherHeureFrance() {
-  heureDiv.innerHTML = `France: ${new Date().toLocaleTimeString()}`;
-}
-
-function afficherHeureMexique() {
-  const offsetMexique = -5; // Fuseau horaire du Mexique : UTC-5
-  const dateMexique = new Date(new Date().getTime() + offsetMexique * 60 * 60 * 1000);
-  heureDiv.innerHTML = `Mexique: ${dateMexique.toLocaleTimeString()}`;
-}
-
-function miseAJourHeure() {
-  setInterval(function() {
-    if (heureDiv.innerHTML.includes('France')) {
-      afficherHeureFrance();
-    } else {
-      afficherHeureMexique();
-    }
-  }, 1000);
-}
-
-miseAJourHeure();
-
-
-// MODAL HIT
-
-const modalHitWrapper = document.querySelector("#popup-hit"),
-ModalHitHeader = modalHitWrapper.querySelector("#header-it");
-
-
-
-function openRecipeHit() {
-  modalHitWrapper.style.display = 'block';
-};
-
-function  closeRecipeHit() {
-  modalHitWrapper.style.display = 'none';
-};
 
 
 

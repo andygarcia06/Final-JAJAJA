@@ -9910,7 +9910,7 @@ a {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-image: url("../../public/img/KODAK/8.jpg");
+  background-image: url("../../public/img/FONDS-COULEUR/background-buena-onda.jpg");
   background-size: cover; }
   .jajaja-section-1 .jajaja-main-modal-container {
     width: 70%;
@@ -9951,7 +9951,7 @@ a {
             font-size: 70% !important;
             padding-top: 0.4vh; }
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-bottle-text {
-          width: 63%; }
+          width: 50%; }
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-tacos-text, .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-cactus-text {
           width: 44%; }
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-ghettoblaster-text {
@@ -10458,7 +10458,7 @@ a {
   -webkit-text-stroke: 1px solid #fff;
   font-family: 'JAJAJA';
   text-align: center;
-  width: 20rem;
+  width: 30rem;
   z-index: 1;
   display: none;
   transform: translate(-50%, -50%);
@@ -10498,14 +10498,19 @@ a {
   transform: scale(1.2); }
 
 .popup-contacts {
-  width: 15%;
+  width: 20rem !important;
+  height: 35vh;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
   background-color: #fff;
   border-radius: 10px;
   -webkit-text-stroke: 1px solid #fff;
   font-family: 'JAJAJA';
   display: none;
-  z-index: 1; }
+  z-index: 1;
+  position: absolute !important;
+  left: 80% !important;
+  top: 5vh !important;
+  font-size: 140% !important; }
   .popup-contacts header {
     height: 5vh;
     border-bottom: 3px solid black;
@@ -10515,15 +10520,17 @@ a {
   .popup-contacts .jajaja-contacts-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 1vh;
+    justify-content: space-between;
     text-align: center; }
     .popup-contacts .jajaja-contacts-content .jajaja-contacts-section img {
-      max-width: 10%;
-      max-height: 10%;
-      stroke: #e63329; }
+      max-width: 15%;
+      max-height: 15%;
+      stroke: #e63329;
+      margin-bottom: 1vh !important; }
     .popup-contacts .jajaja-contacts-content .jajaja-contacts-section a {
-      color: #e63329; }
+      color: #e63329;
+      margin-bottom: 5vh !important;
+      text-decoration: none; }
     .popup-contacts .jajaja-contacts-content .jajaja-contacts-section a:hover {
       color: rgba(204, 33, 28, 0.9); }
 
@@ -10533,8 +10540,6 @@ a {
 .volume-control {
   position: absolute;
   display: none;
-  bottom: 0;
-  left: 50rem;
   border-radius: 5px;
   top: 4vh;
   width: 12rem;
@@ -10576,6 +10581,7 @@ a {
   cursor: pointer; }
 
 .popup-music {
+  display: none;
   position: absolute;
   top: 10%;
   left: 1%;
@@ -10611,6 +10617,12 @@ a {
   .popup-music .jajaja-music-content {
     border: 2px solid black;
     margin: 10px; }
+  .popup-music .jajaja-music-soon-content {
+    height: 15vh;
+    font-family: 'JAJAJA';
+    text-align: center;
+    font-size: 400%;
+    color: #e63329; }
   .popup-music .jajaja-track-infos {
     color: black !important; }
     .popup-music .jajaja-track-infos #jajaja-track-name {
@@ -10670,18 +10682,57 @@ a {
   position: absolute;
   display: none;
   top: 20%;
+  height: 30vh;
   left: 70%;
   z-index: 1;
-  background-color: white; }
+  text-align: center;
+  padding: 1vh 2rem;
+  background-color: #fff7c7;
+  font-family: 'JAJAJA';
+  color: #e63329; }
   #popup-hit h1, #popup-hit .h1, #popup-hit h2, #popup-hit .h2, #popup-hit h3, #popup-hit .h3, #popup-hit h4, #popup-hit .h4, #popup-hit H5 {
-    font-size: 220%;
     font-family: 'JAJAJA';
-    text-align: center; }
+    text-align: center;
+    font-size: 280%; }
+  #popup-hit #error-message {
+    display: none;
+    background-color: #e63329;
+    color: #fff7c7;
+    padding: 0.5vh 1rem;
+    border: 1px solid #fff7c7;
+    cursor: pointer;
+    font-size: 140%;
+    position: absolute;
+    top: 14vh;
+    left: 6rem;
+    border-radius: 2px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+    z-index: 1000000; }
   #popup-hit header {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom: 3px solid black;
     height: 5vh; }
+  #popup-hit form {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    #popup-hit form input {
+      width: 50%;
+      margin: auto; }
+    #popup-hit form .taco-club-submit {
+      margin-top: 1vh;
+      background-color: #e63329;
+      border: none;
+      color: #fefee2;
+      font-size: 200%;
+      width: 30%;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+      opacity: 1; }
+    #popup-hit form .taco-club-submit:hover {
+      opacity: 0.90;
+      transform: scale(1.02); }
 
 .swiper-slide {
   width: 80%;
@@ -10887,16 +10938,30 @@ a {
   #preloader .jajaja-preloader-img {
     width: 100%;
     text-align: center;
-    height: 30vh; }
+    height: 30vh;
+    transform: scale(0.9); }
     #preloader .jajaja-preloader-img img {
-      max-width: 70%;
-      max-height: 70%;
-      position: relative;
-      top: 5vh; }
+      max-width: 80%;
+      max-height: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotation 3s linear infinite; }
+  #preloader .jajaja-preloader-logo {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: -10vh; }
+    #preloader .jajaja-preloader-logo svg {
+      max-width: 50%;
+      max-height: 50%;
+      margin: auto; }
 
 #progressbar {
   width: 20%;
   height: 30px;
+  margin-top: -2vh;
   -webkit-appearance: none;
   appearance: none;
   background-color: #fff7c7;
@@ -11038,5 +11103,10 @@ a {
     width: 0%; }
   100% {
     width: 100%; } }
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg); } }
 
 /*# sourceMappingURL=default.css.map */
