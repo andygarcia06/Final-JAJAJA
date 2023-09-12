@@ -1,0 +1,57 @@
+{
+    "recettes": [
+      {
+        "nom": "Recette 1",
+        "ingredients_principaux": ["Ingrédient A", "Ingrédient B"],
+        "description": "Description de la recette 1.",
+        "nombre_personnes": 4,
+        "temps_preparation": "30 minutes",
+        "ingredients": [
+          "Ingrédient 1",
+          "Ingrédient 2",
+          "Ingrédient 3",
+          "Ingrédient 4",
+          "Ingrédient 5",
+          "Ingrédient 6",
+          "Ingrédient 7",
+          "Ingrédient 8",
+          "Ingrédient 9"
+        ],
+        "etapes_preparation": [
+          "Étape 1 : Faire ceci",
+          "Étape 2 : Faire cela",
+          "Étape 3 : Terminer",
+          "Étape 4 : Faire ceci",
+          "Étape 5 : Faire cela",
+          "Étape 6 : Terminer"
+        ]
+      },
+      {
+        "nom": "Recette 2",
+        "ingredients_principaux": ["Ingrédient A", "Ingrédient B"],
+        "description": "Description de la recette 1.",
+        "nombre_personnes": 4,
+        "temps_preparation": "30 minutes",
+        "ingredients": [
+          "Ingrédient 1",
+          "Ingrédient 2",
+          "Ingrédient 3",
+          "Ingrédient 4",
+          "Ingrédient 5",
+          "Ingrédient 6",
+          "Ingrédient 7",
+          "Ingrédient 8",
+          "Ingrédient 9"
+        ],
+        "etapes_preparation": [
+          "Étape 1 : Faire ceci",
+          "Étape 2 : Faire cela",
+          "Étape 3 : Terminer",
+          "Étape 4 : Faire ceci",
+          "Étape 5 : Faire cela",
+          "Étape 6 : Terminer"
+        ]
+      }
+    ]
+  }
+  

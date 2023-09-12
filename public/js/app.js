@@ -1,5 +1,20 @@
-// RELOAD PAGE
 
+
+
+//POPUP WRAPPER
+const jajajaWrapper = document.querySelector('.jajaja-wrapper');
+const zIndex = 1;
+        
+function openWrapper() {
+    jajajaWrapper.style.display = 'block';
+    bringToFront(popup);
+    }
+        
+function closeWrapper() {
+    jajajaWrapper.style.display = 'none';
+  }
+
+  
 
 
 // BRING TO FRONT
@@ -12,29 +27,27 @@ function bringToFront(popup) {
 
   popup.classList.add('active');
 }
-     
 
 
+    
 //PRELOADER
 
 
 
-const progressBar = document.getElementById("progressbar");
 
-function updateProgressBar() {
-  const progress = parseInt(progressBar.value);
-  if (progress < 100) {
-    progressBar.value = progress + 1;
-    if (progress > 0) {
-      progressBar.style.background = `linear-gradient(to right, rgb(250, 0, 31)${progress}%,rgb(255, 247, 199)  ${progress}%)`;
-    }
-  } else {
-    clearInterval(intervalId);
-    document.getElementById("preloader").style.display = "none";
-  }
-}
 
-const intervalId = setInterval(updateProgressBar, 40); 
+
+// const popupCorbeille = document.getElementsByClassName('popup-corbeille')
+
+// function popupCorbeilleOpen(){
+//   popupCorbeille.style.display = 'block';
+// }
+
+// function popupCorbeilleClosed(){
+//   popupCorbeille.style.display = 'none';
+// }
+
+
 
 
 
@@ -105,76 +118,13 @@ const arrowToNext = document.querySelectorAll('.to-next-section[href^="#"]').for
     });
 });
 
-const section1 = document.querySelector('.jajaja-section-1');
 
 window.onResize = function() {
   if (window.innerWidth <= 1000) section1.classList.add('container');
   else section1.classList.remove('container');
 };
 
-// RIGHT CLICK
 
-const rightClickCloseBtn = document.querySelector("#tools-close-btn")
-const el = (sel, par) => (par||document).querySelector(sel);
-
-const elPopup = el("#popup-tools");
-
-function rightClick(evt) {
-    evt.preventDefault();
-  const elBtn = evt.currentTarget;
-  
-  Object.assign(elPopup.style, {
-    left: `${evt.pageX + elBtn.scrollLeft - elBtn.offsetLeft}px`,
-    top:  `${evt.pageY + elBtn.scrollTop - elBtn.offsetTop}px`,
-    display: `block`,
-    zIndex:800000000000,
-  });
-};
-
-section1.addEventListener("contextmenu", rightClick,false);
-section1.addEventListener("click",()=>{
-    elPopup.style.display = 'none';
-    bringToFront(popup);
-});
-rightClickCloseBtn.addEventListener('click',()=>{
-    elPopup.style.display = 'none';
-})
-
-
-
-const popupToolsClock = document.querySelector('#popup-clock');
-const triggerPopupToolsClock = document.getElementById('jajaja-trigger-popup-tools-clock');
-const popupToolsBackground = document.querySelector('.popup-background');
-const triggerPopupToolsBg = document.getElementById('jajaja-trigger-popup-tools-bg');
-
-// POPUP CLOCK
-
-function openPopupToolsClock(){
-    popupToolsClock.style.display = 'block';
-    popupToolsBackground.style.display ='none';
-};
-
-function closePopupToolsClock(){
-    popupToolsClock.style.display = 'none';
-};
-
-triggerPopupToolsClock.addEventListener('click',openPopupToolsClock)
-
-//POPUP BACKGROUND
-
-
-
-function openPopupToolsBg(){
-    popupToolsBackground.style.display = 'block';
-    popupToolsClock.style.display ='none';
-    bringToFront(popup);
-};
-
-function closePopupToolsBg(){
-    popupToolsBackground.style.display = 'none';
-};
-
-triggerPopupToolsBg.addEventListener('click',openPopupToolsBg)
 
 // FORMULAIRE
 
@@ -393,6 +343,8 @@ function openRecipeModal() {
 function closeRecipeModal() {
     modalRecipeWrapper.style.display = 'none';
 };
+
+
 
 
 

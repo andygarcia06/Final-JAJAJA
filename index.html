@@ -15,9 +15,6 @@
 
     <!-- GOOGLE ICONS -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-
     <!-- SWIPER.JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -32,7 +29,7 @@
             <img src="./public/img/png/SUN.png" alt="" srcset="">
         </div>
         <div class="jajaja-preloader-logo">
-            <svg viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(230, 51, 42);">
+            <svg viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: #E6332A;">
                 <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
                 <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
                 <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
@@ -42,13 +39,15 @@
                 <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
             </svg>
         </div>
-        <input type="range" class="" id="progressbar" min="0" max="100" value="0" step="1">
+        <input type="range" class="" id="progressbar-jajaja" min="0" max="100" value="0" step="1">
         <p id="jajaja-preloader-text">Loading Buena Onda</p>
     </div>
+
+
     <section class="jajaja-section-main">   
         <header class="jajaja-header" id="jajaja-header">
             <nav class="navbar">
-                <svg class="logo" viewBox="0 0 278 95" fill="rgb(215, 37, 71)" xmlns="http://www.w3.org/2000/svg" style="fill: rgb( 230 ,  51 , 42)">
+                <svg class="logo" viewBox="0 0 278 95" fill="rgb(215, 37, 71)" xmlns="http://www.w3.org/2000/svg" style="fill: rgb( 230 ,  51 , 42)" onclick="openWrapper()">
                     <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
                     <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
                     <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
@@ -58,15 +57,16 @@
                     <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
                 </svg>
                 <ul class="nav-items">
-                  <li><a href="#" id="jajaja-homeLink" onclick="openWrapper()">Home</a></li>
+                  <li><a href="#" id="jajaja-homeLink" >Home</a></li>
                   <li><a href="#" id="jajaja-volume" onclick="openVolumeControler()">Volume</a>
-                    <div class="volume-control">
-                        <input type="range" min="0" max="1" step="0.02" value="1" id="volume-slider">
-                        <a href="#" onclick="closeVolumeControler()">&times;</p>
-                    </div></li>
+                    <div class="volume-control volume-bar">
+                        <input type="range" id="customRange" class="jajaja-volume-input">
+               
+                    </div>
+                </li>
                   <li><a class="fullscreen-btn" href="#">Fullscreen</a></li>
                   <li><a href="#jajaja-section-txt-1">Bio</a></li>
-                  <li><a href="#" onclick="triggerContacts()" >Contact</a></li>
+                  <li><a href="#" onclick="contactTrigger()" >Contact</a></li>
                   <div class="jajaja-nav-hour-container ">
                     <a id="jajaja-nav-hour" class="nav-link text-primary current-date">Hour<span></a>
                 </div>
@@ -130,7 +130,7 @@
                         </div>
 
                         <div class="jajaja-wrapper-content">
-                            <p>Mexique, une rue, début de soirée. Ecoute, ce son c’est la vie. Un son qui vient du cœur davantage que de l’esprit. Un ami. Deux amis. Toute la rue en folie. Un bruit qui ne triche pas, que l’on n’arrête pas. Débordant. Imprévisible. Extravagant. Ici, on mange comme on s’aime. A plusieurs, à pas d’heure. Tacos, Tequilla, Tostadas, y mucho mas. Ici c’est comme là-bas, c’est JAJAJA. La buena onda mexicana.</p>
+                            <p>Mexique, une rue, début de soirée.<br>Écoute, ce son c’est la vie. <br>Débordant. <br>Imprévisible. Ici, on mange comme on s’aime. <br>À plusieurs, à pas d’heure. <br>Tacos, Tequila, Tostada, y mucho mas. <br>Ici c’est comme là-bas, c’est JAJAJA. <br>La buena onda mexicana.</p>
                         </div>
                         </div>
                     </div>
@@ -174,6 +174,14 @@
                                 <div class="jajaja-icon-img-container" onclick="openRecipeHit()">
                                     <img class="jajaja-dektop-icon" id="jajaja-icon-bottle" src="./public/img/PIXELS/desktop-icons/resized/sauce.png" alt="Sauce">
                                     <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">TACO CLUB</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jajaja-icon"  onmousedown="dragElement(this)">
+                            <div class="jajaja-icon-img">
+                                <div class="jajaja-icon-img-container" onclick="openPopupCorbeille()">
+                                    <img class="jajaja-dektop-icon"  src="./public/img/PIXELS/desktop-icons/POUBELLE.png" alt="Sauce">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">CORBEILLE</p></div>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +259,7 @@
 
     <!-- JAJAJA SECTIONS TEXT -->
     <aside>
-        <div class="close-btn">
+        <div class="close-btn close-section">
             <div class="close-container"><a href="#jajaja-header"> &times;</a></div>
         </div>
     <!-- SECTION 1) -->
@@ -292,26 +300,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="row jajaja-section-next">
+                <div class="row jajaja-section-1-next">
                     <a href="#jajaja-section-txt-2"><i class="fi fi-rr-angle-circle-down" id="jajaja-1-2" ></i></a>
                 </div>
             </div>
+            </div>
+            
         </section>
         <!-- SECTION 2) -->
 
         <section class="jajaja-section-txt" id="jajaja-section-txt-2">
-                <div class="jajaja-section-prev">
-                    <a href="#jajaja-section-txt-1" id="jajaja-2-1"><i class="fi fi-rr-angle-circle-up" ></i></a>
-                </div>
-            <div class="container">
+            <div class="container jajaja-txt-container">
                 <div class="row jajaja-section-txt-title mb-5">
-                    <h1>NOTRE HISTOIRE</h1>
+                    <h1>JAJAJA C'EST</h1>
                 </div>
                 <div class="row jajaja-section-txt-content">
                     <div class="col-lg-4">
                         <img src="./public/img/BG/JAJAJA-BG-BLUE.png" alt="" srcset="">
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-8 jajaja-block-txt">
                             <p>
                                     « J’ai fait deux rencontres majeures dans ma vie : <br>
                                     Il y a 10 ans, j’ai rencontré Olivier et nous avons fondé Les Niçois (restaurant, bar, pétanque, épicerie). Il y a quinze ans, j’ai passé deux des plus belles années de ma vie, au Mexique.<br><br>
@@ -335,6 +342,12 @@
                             </p>
                     </div>
                 </div>
+            </div>
+
+            <div class="jajaja-sections-nav">
+                <div class="jajaja-section-prev">
+                    <a href="#jajaja-section-txt-1" id="jajaja-2-1"><i class="fi fi-rr-angle-circle-up" ></i></a>
+                </div>
                 <div class="jajaja-section-next">
                     <a href="#jajaja-section-txt-3"><i class="fi fi-rr-angle-circle-down" id="jajaja-2-3"></i></a>
                 </div>
@@ -344,9 +357,7 @@
                 <!-- SECTION 3) -->
 
                 <section class="jajaja-section-txt" id="jajaja-section-txt-3">
-                    <div class="jajaja-section-prev">
-                        <a href="#jajaja-section-txt-2" id="jajaja-3-2"><i class="fi fi-rr-angle-circle-up" ></i></a>
-                    </div>
+
                 <div class="container">
                     <div class="row jajaja-section-txt-title">
                         <h1>LA TAQUERIA</h1>
@@ -369,13 +380,61 @@
                             <img class='jajaja-img-max-width'src="./public/img/BG/JAJAJA-BG-ORANGE.png" alt="" srcset="">
                         </div>
                     </div>
-                    <div class="jajaja-section-next">
-                        <i class="fi fi-rr-angle-circle-down"></i>
+                </div>
+                <div class="jajaja-sections-nav">
+                    <div class="jajaja-section-prev">
+                        <a href="#jajaja-section-txt-2" id="jajaja-3-2"><i class="fi fi-rr-angle-circle-up" ></i></a>
                     </div>
                 </div>
             </section>
 
+    <!-- POPUP CORBEILLE -->
 
+    <div class="popup-corbeille box popup jajaja-draggable">
+        <header class="modal-bg-header jajaja-popup-header">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span class="jajaja-header-circle" onclick="closePopupCorbeille()" id="modal-bg-close"></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+            <div class="line-container">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
+        </header>
+        <div class="popup popup-container popup-corbeille-container">
+            <div class="row">
+                <div class="jajaja-background-corbeille">
+                    <img src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <div class="jajaja-background-text">
+                        <p>revengeofthetacos.jpeg</p>
+                    </div>
+                </div>
+                <div class="jajaja-background-corbeille">
+                    <img src="./public/img/KODAK/16.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <div class="jajaja-background-text">
+                        <p>flou.jpeg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="jajaja-background-corbeille">
+                    <img src="./public/img/KODAK/27.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <div class="jajaja-background-text">
+                        <p>party.jpeg </p>
+                    </div>
+                </div>
+                <div class="jajaja-background-corbeille">
+                    <img src="./public/img/KODAK/8.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <div class="jajaja-background-text">
+                        <p>wallpaper.jpeg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- POPUP PACMAN -->
@@ -405,7 +464,7 @@
             </div>
         </header>
             <div class="jajaja-contact-content">
-                <h2>PARTAGE TA BUENA ONDA !!</h2>
+                <h2>SEND BUENA ONDA</h2>
                 <form name="contactForm" onsubmit="return validateForm()" method="post">
                     <input type="text" id="name" name="name" placeholder="nom et prenom"><br><br>
             
@@ -432,7 +491,7 @@
                     <a href="#"><img src="./public/img/instagram.svg" alt=""><p>Notre instagram</p></a>
                 </div>
                 <div class="jajaja-contacts-section">
-                    <a href="#" onclick="contactTrigger()" id="#jajaja-mail-trigger"><img src="./public/img/envelope.svg" alt=""><p>Contactez-nous</p></a>
+                    <a href="#"  id="#jajaja-mail-trigger"><img src="./public/img/envelope.svg" alt=""><p>Contactez-nous</p></a>
                 </div>
             </div>
     </div>  
@@ -526,7 +585,7 @@
               </div>
         </header>
             <div class="jajaja-music-soon-content">
-                <p> playlist soon !</p>
+                <p> coming soon !</p>
             </div>
 
     </div>  
@@ -565,7 +624,7 @@
 
     <!-- POPUP RIGHT CLICK BIS -->
 
-    <div class="box popup" id="popup-tools"onclick='bringToFront(this)'>
+    <div class="box popup" id="popup-tools">
         <header  id="popup-tools-header">
             <a id='tools-close-btn' href="#" >&times;</a>
         </header>
@@ -574,7 +633,7 @@
                 <div id="jajaja-trigger-popup-tools-clock" class="popup-tools-icon"><img src="./public/img/PIXELS/clock.png" alt=""></div>
                 <div class="popup-tools-icon" id="jajaja-trigger-popup-tools-bg"><img src="./public/img/PIXELS/crayon.png" alt="" onclick="triggerBagroundPopup()"></div>
                 <div class="popup-tools-icon"><img src="./public/img/PIXELS/ecrou.png" alt=""></div>
-                <div class="popup-tools-icon" onclick="openPopupMusic()" ><img src="./public/img/PIXELS/ghettoblaster-big-png.png" alt=""></div>
+                <!-- <div class="popup-tools-icon" onclick="openPopupMusic()" ><img src="./public/img/PIXELS/ghettoblaster-big-png.png" alt=""></div> -->
                 <div class="popup-tools-icon">...
                 </div>
             </div>
@@ -606,6 +665,16 @@
                 </div>
                 <div class="row">
                     <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-2-1">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-2-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
                         <div class="jajaja-background-container" id="jajaja-bg-3">
                         </div>
                     </div>
@@ -629,7 +698,52 @@
                         <div class="jajaja-background-container" id="jajaja-bg-7">
                         </div>
                     </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-8">
+                        </div>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-9">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-10">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-11">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-12">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-13">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-14">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-15">
+                        </div>
+                    </div>
+                    <div class="jajaja-background">
+                        <div class="jajaja-background-container" id="jajaja-bg-16">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
     
             <div class="jajaja-popup-menu"></div>
@@ -656,74 +770,148 @@
 
 
 
-    
-
     <script type="text/javascript" src="./public/js/modal.js" async></script>
     <script type="text/javascript"  src="./public/js/app.js" async></script>
     <script type="text/javascript"  src="./public/js/popup.js" async></script>
-    <script type="text/javascript" src="./public/js/colors.js" async></script>
-    <script type="text/javascript" src="./public/js/nav.js" async></script>
     <script type="text/javascript" src="./public/js/caroussel.js" async></script>
     <script src="./public/js/features.js"></script>
-    <script type="text/javascript" src="./public/js/music.js" async></script>
+<script>
+    // RIGHT CLICK
 
+const rightClickCloseBtn = document.querySelector("#tools-close-btn")
+const el = (sel, par) => (par||document).querySelector(sel);
+
+const elPopup = el("#popup-tools");
+
+function rightClick(evt) {
+    evt.preventDefault();
+  const elBtn = evt.currentTarget;
+  
+  Object.assign(elPopup.style, {
+    left: `${evt.pageX + elBtn.scrollLeft - elBtn.offsetLeft}px`,
+    top:  `${evt.pageY + elBtn.scrollTop - elBtn.offsetTop}px`,
+    display: `block`,
+    zIndex:800000000000,
+  });
+};
+
+const section1 = document.querySelector('.jajaja-section-main')
+
+ section1.addEventListener("contextmenu", rightClick,false); 
+section1.addEventListener("click",()=>{
+    elPopup.style.display = 'none';
+    bringToFront(popup);
+});
+rightClickCloseBtn.addEventListener('click',()=>{
+    elPopup.style.display = 'none';
+})
+
+
+
+const popupToolsClock = document.querySelector('#popup-clock');
+const triggerPopupToolsClock = document.getElementById('jajaja-trigger-popup-tools-clock');
+const popupToolsBackground = document.querySelector('.popup-background');
+const triggerPopupToolsBg = document.getElementById('jajaja-trigger-popup-tools-bg');
+
+// POPUP CLOCK
+
+function openPopupToolsClock(){
+    popupToolsClock.style.display = 'block';
+    popupToolsBackground.style.display ='none';
+};
+
+function closePopupToolsClock(){
+    popupToolsClock.style.display = 'none';
+};
+
+triggerPopupToolsClock.addEventListener('click',openPopupToolsClock)
+
+//POPUP BACKGROUND
+
+
+
+function openPopupToolsBg(){
+    popupToolsBackground.style.display = 'block';
+    popupToolsClock.style.display ='none';
+    bringToFront(popup);
+};
+
+function closePopupToolsBg(){
+    popupToolsBackground.style.display = 'none';
+};
+
+triggerPopupToolsBg.addEventListener('click',openPopupToolsBg)
+</script>
+<script>
+    const popupCorbeille = document.querySelector('.popup-corbeille');
+
+    function openPopupCorbeille(){
+        popupCorbeille.style.display = 'block'
+    }
+
+    function closePopupCorbeille(){
+        popupCorbeille.style.display = 'none'
+    }
+</script>
+<script>
+    const progressBar = document.getElementById("progressbar-jajaja");
+
+function updateProgressBar() {
+  const progress = parseInt(progressBar.value);
+  if (progress < 100) {
+    progressBar.value = progress + 1;
+    if (progress > 0) {
+      progressBar.style.background = `linear-gradient(to right, rgb(230, 51, 43)${progress}%,rgb(255, 247, 199)  ${progress}%)`;
+    }
+  } else {
+    clearInterval(intervalId);
+    document.getElementById("preloader").style.display = "none";
+  }
+}
+
+const intervalId = setInterval(updateProgressBar, 40); 
+</script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          // Récupérer le lien Home par son id
-          const homeLink = document.getElementById("jajaja-homeLink");
-      
-          // Ajouter un écouteur d'événement pour le clic sur le lien Home
-          homeLink.addEventListener("click", function(event) {
-            // Empêcher le comportement par défaut (la navigation vers une autre page)
-            event.preventDefault();
-      
-            // Recharger la page
-            location.reload();
-          });
-        });
-
-        function closeInstaModal(){
-            const socialWrapper = document.querySelector('.modal-social-wrapper');
-            socialWrapper.style.display = "none";
-        }
-    </script>
-
-    <script>
-
-                // CHANGE BACKGROUND 
 
 const bg1 = document.querySelector('#jajaja-bg-1');
 const bg2 = document.querySelector('#jajaja-bg-2');
+const bg2_1 = document.querySelector('#jajaja-bg-2-1');
+const bg2_2 = document.querySelector('#jajaja-bg-2-2');
 const bg3 = document.querySelector('#jajaja-bg-3');
 const bg4 = document.querySelector('#jajaja-bg-4');
 const bg5 = document.querySelector('#jajaja-bg-5');
 const bg6 = document.querySelector('#jajaja-bg-6');
 const bg7 = document.querySelector('#jajaja-bg-7');
+const bg8 = document.querySelector('#jajaja-bg-8');
+const bg9 = document.querySelector('#jajaja-bg-9');
+const bg10 = document.querySelector('#jajaja-bg-10');
+const bg11 = document.querySelector('#jajaja-bg-11');
+const bg12 = document.querySelector('#jajaja-bg-12');
+const bg13 = document.querySelector('#jajaja-bg-13');
+const bg14 = document.querySelector('#jajaja-bg-14');
+const bg15 = document.querySelector('#jajaja-bg-15');
 
 
 const jajajaSection = document.querySelector('.jajaja-section-1')
 
 bg1.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-1');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-7');
+    jajajaSection.classList.remove('bg-2','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
-
 
 });
 
 bg2.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-2');
-    jajajaSection.classList.remove('bg-1','bg-3','bg-4','bg-5','bg-6','bg-7');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
-
-
 });
 
 bg3.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-3');
-    jajajaSection.classList.remove('bg-2','bg-1','bg-4','bg-5','bg-6','bg-7');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
@@ -731,7 +919,7 @@ bg3.addEventListener('click',()=>{
 
 bg4.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-4');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-1','bg-5','bg-6','bg-7');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
@@ -739,7 +927,7 @@ bg4.addEventListener('click',()=>{
 
 bg5.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-5');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-1','bg-6','bg-7');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-4','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.add('wrapper-cover');
 
@@ -748,7 +936,7 @@ bg5.addEventListener('click',()=>{
 
 bg6.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-6');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1','bg-7');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-4','bg-5','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.add('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
@@ -756,13 +944,108 @@ bg6.addEventListener('click',()=>{
 
 bg7.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-7');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1','bg-6');
+    jajajaSection.classList.remove('bg-2','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-1','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+bg8.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-8');
+    jajajaSection.classList.remove('bg-2','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-1','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
 });
 
+bg9.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-9');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-2','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
 
+bg10.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-10');
+    jajajaSection.classList.remove('bg-2','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-1','bg-9','bg-8','bg-11','bg-12','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg11.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-11');
+    jajajaSection.classList.remove('bg-2','bg-2-1','bg-2_2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-1','bg-9','bg-10','bg-8','bg-12','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg12.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-12');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+bg13.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-13');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+bg14.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-14');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+bg15.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-14');
+    jajajaSection.classList.remove('bg-1','bg-2-1','bg-2_2','bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+bg2_1.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-2-1');
+    jajajaSection.classList.remove('bg-1','bg-2_2','bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+bg2_2.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-2-2');
+    jajajaSection.classList.remove('bg-1','bg-2_1','bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8','bg-9','bg-10','bg-11','bg-12','bg-13','bg-14','bg-15');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+});
+
+
+        
+const rangeInput = document.getElementById('customRange');
+const volumeInput = document.getElementsByClassName('jajaja-volume-input')
+
+rangeInput.addEventListener('input', () => {
+  const value = rangeInput.value;
+  rangeInput.style.background = `linear-gradient(to right, #e6332a 0%, #e6332a ${value}%, rgba(230, 51, 42, 0.5) ${value}%, rgba(230, 51, 42, 0.5) 100%)`;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const homeLink = document.getElementById("jajaja-homeLink");
+
+  homeLink.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    location.reload();
+  });
+});
+
+function closeInstaModal(){
+    const socialWrapper = document.querySelector('.modal-social-wrapper');
+    socialWrapper.style.display = "none";
+}
 
 const popups = document.querySelectorAll('.jajaja-draggable');
 
@@ -778,17 +1061,13 @@ function mouseDown(e) {
   const startX = e.clientX - popup.offsetLeft;
   const startY = e.clientY - popup.offsetTop;
   
-  // On ajoute des écouteurs d'événement sur la page pour suivre le mouvement de la souris
   document.addEventListener('mousemove', mouseMove);
   document.addEventListener('mouseup', mouseUp);
   
-  // Fonction appelée lorsqu'on bouge la souris
   function mouseMove(e) {
-    // On calcule la nouvelle position de la popup
     const newLeft = e.clientX - startX;
     const newTop = e.clientY - startY;
     
-    // On applique la nouvelle position à la popup
     popup.style.left = newLeft + 'px';
     popup.style.top = newTop + 'px';
   }
@@ -905,6 +1184,12 @@ function getHighestZIndex() {
 }
 
     </script>
+    
+
+
+
+
+
 
 
 </body>

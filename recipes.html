@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes</title>
+</head>
+<body>
+    <div id="recette-container">
+        <h1>Nom de la recette</h1>
+        <p>Description :</p>
+        <p>Nombre de personnes :</p>
+        <p>Temps de préparation :</p>
+        <ul>
+            <li>Ingrédients principaux :</li>
+        </ul>
+        <ul>
+            <li>Ingrédients :</li>
+        </ul>
+        <h2>Étapes de préparation :</h2>
+        <ol>
+            <!-- Les étapes de préparation seront ajoutées ici -->
+        </ol>
+        <h2>Photos de préparation :</h2>
+        <div id="photos-container">
+            <!-- Les photos seront ajoutées ici -->
+        </div>
+    </div>
+    <script>
+        // Charger le fichier JSON contenant les recettes
+fetch('./public/json/recipes.json')
+  .then(response => response.json())
+  .then(data => {
+    const recetteContainer = document.getElementById('recette-container');
+    let index = 0;
+
+    // Fonction pour afficher la recette actuelle
+    function afficherRecette(index) {
+      const recette = data.recettes[index];
+      recetteContainer.querySelector('h1').textContent = recette.nom;
+      // Affichez d'autres détails de la recette ici
+    }
+
+    // Afficher la première recette
+    afficherRecette(index);
+
+    // Écouter le défilement de la page
+    window.addEventListener('scroll', () => {
+      const scrollHeight = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.body.offsetHeight;
+
+      // Vérifiez si l'utilisateur a atteint le bas de la page
+      if((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
+        console.log('recte ++')
+        index++;
+        if (index < data.recettes.length) {
+          afficherRecette(index);
+        }
+      }
+    });
+  })
+  .catch(error => {
+    console.error('Erreur de chargement du fichier JSON :', error);
+  });
+
+
+    </script>
+
+</body>
+
+</html>
