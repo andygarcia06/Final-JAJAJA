@@ -10338,9 +10338,9 @@ input[type="range"]::-webkit-slider-thumb {
 
 #popup-tools {
   width: 3.5rem;
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.96) !important;
   border-radius: 5px;
-  height: 30vh;
+  height: 24vh;
   display: none;
   position: absolute;
   border: 2px solid black; }
