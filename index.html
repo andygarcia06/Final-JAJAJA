@@ -24,7 +24,7 @@
 
 </head>
 <body class="jajaja-body" onload="windowNotMuted()">
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="jajaja-preloader-img">
             <img src="./public/img/png/SUN.png" alt="" srcset="">
         </div>
@@ -41,7 +41,7 @@
         </div>
         <input type="range" class="" id="progressbar-jajaja" min="0" max="100" value="0" step="1">
         <p id="jajaja-preloader-text">Loading Buena Onda</p>
-    </div>
+    </div> -->
 
 
     <section class="jajaja-section-main">   
@@ -130,7 +130,6 @@
                         </div>
 
                         <div class="jajaja-wrapper-content">
-                            <p>Mexique, une rue, début de soirée.<br>Écoute, ce son c’est la vie. <br>Débordant. <br>Imprévisible. Ici, on mange comme on s’aime. <br>À plusieurs, à pas d’heure. <br>Tacos, Tequila, Tostada, y mucho mas. <br>Ici c’est comme là-bas, c’est JAJAJA. <br>La buena onda mexicana.</p>
                         </div>
                         </div>
                     </div>
@@ -145,7 +144,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="jajaja-icon"onmousedown="dragElement(this)">
+                        <div class="jajaja-icon" onclick="openPopupTaqueria()" >
                             <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
                                 <div class="jajaja-icon-img-container">
                                     <img class="jajaja-dektop-icon" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/resized/cactus.png" alt="Cactus">
@@ -265,43 +264,24 @@
     <!-- SECTION 1) -->
 
         <section class="jajaja-section-txt" id="jajaja-section-txt-1">
-            <div class="container">
-                <div class="row jajaja-section-txt-title">
-                    <h1 class="">JAJAJA, LA BUENA ONDA MEXICANA</h1>
+            <div class="jajaja-sections-nav" id="jajaja-sections-nav-1">
+                <div class="jajaja-section-prev">
+                    <a href="#jajaja-header" id="jajaja-1-0"><i class="fi fi-rr-angle-circle-up" ></i></a>
                 </div>
-                <div class="row jajaja-section-txt-content">
-                    <div class="col-lg-8 text-align">
-                        <p>JAJAJA !
-
-                            LA BUENA ONDA QUI COULE DANS LE SANG DU PAYS.<br><br>
-                            
-                            “BARRIGA LLENA, CORAZÓN CONTENTO” *<br><br>
-                            
-                            ICI, ON MANGE, ON VIT, ON RIT.<br>
-                            (TRÈS) FORT, À PLUSIEURS, À PAS D’HEURE.<br><br>
-                            
-                            TACOS, TEQUILA, TOSTADAS, <br><br>
-                            
-                            ICI COMME LA BAS C’EST  <br>
-                            <svg class="" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(215, 37, 71);">
-                                <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
-                                <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
-                                <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
-                                <path d="M179.7 19.3C178.8 8.5 169.7 0 158.7 0C147.1 0 137.7 9.4 137.6 21V21.1V93.1H156.9V64.3H160.5V93.1H179.8V21.1C179.8 20.5 179.8 19.9 179.7 19.3ZM156.9 21.1C156.9 20.1 157.7 19.3 158.7 19.3C159.7 19.3 160.5 20.1 160.5 21.1V44.4H156.9V21.1V21.1Z"></path>
-                                <path d="M87.9999 19.3C87.0999 8.5 77.9999 0 66.9999 0C55.3999 0 45.9999 9.4 45.8999 21V21.1V93.1H65.1999V64.3H68.7999V93.1H88.0999V21.1C88.0999 20.5 88.0999 19.9 87.9999 19.3ZM65.1999 21.1C65.1999 20.1 65.9999 19.3 66.9999 19.3C67.9999 19.3 68.7999 20.1 68.7999 21.1V44.4H65.1999V21.1Z"></path>
-                                <path d="M271.4 19.3C270.5 8.5 261.4 0 250.4 0C238.8 0 229.4 9.4 229.3 21V21.1V93.1H248.6V64.3H252.2V93.1H271.5V21.1C271.5 20.5 271.5 19.9 271.4 19.3ZM248.6 21.1C248.6 20.1 249.4 19.3 250.4 19.3C251.4 19.3 252.2 20.1 252.2 21.1V44.4H248.6V21.1V21.1Z"></path>
-                                <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
-                            </svg>
-                        </p>
+                <div class="jajaja-section-next">
+                    <a href="#jajaja-section-txt-2"><i class="fi fi-rr-angle-circle-down" id="jajaja-1-2"></i></a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row jajaja-section-container">
+                    <div class="col-lg-6 text-align jajaja-section-left">
+                        <p>La richesse des ingrédients <br> et la diversité des produits <br>font de la cuisine mexicaine <br> l'une des plus fascinantes <br> et des plus délicieuses <br> au monde. <br> Bienvenue chez JAJAJA</p>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="col-md-6 jajaja-swiper-slide-left">
-                            <img class="" src="./public/img/BG/JAJAJA-BG-RED.png" alt="" srcset="">
+                    <div class="col-lg-6 jajaja-section-right">
+                        <div class="col-md-6">
+                            <img class="" src="./public/img/png/POST-campagne-1bis.jpeg" alt="" srcset="">
                         </div>
                     </div>
-                </div>
-                <div class="row jajaja-section-1-next">
-                    <a href="#jajaja-section-txt-2"><i class="fi fi-rr-angle-circle-down" id="jajaja-1-2" ></i></a>
                 </div>
             </div>
             </div>
@@ -310,41 +290,7 @@
         <!-- SECTION 2) -->
 
         <section class="jajaja-section-txt" id="jajaja-section-txt-2">
-            <div class="container jajaja-txt-container">
-                <div class="row jajaja-section-txt-title mb-5">
-                    <h1>JAJAJA C'EST</h1>
-                </div>
-                <div class="row jajaja-section-txt-content">
-                    <div class="col-lg-4">
-                        <img src="./public/img/BG/JAJAJA-BG-BLUE.png" alt="" srcset="">
-                    </div>
-                    <div class="col-lg-8 jajaja-block-txt">
-                            <p>
-                                    « J’ai fait deux rencontres majeures dans ma vie : <br>
-                                    Il y a 10 ans, j’ai rencontré Olivier et nous avons fondé Les Niçois (restaurant, bar, pétanque, épicerie). Il y a quinze ans, j’ai passé deux des plus belles années de ma vie, au Mexique.<br><br>
-
-                                    Il y a 15 ans j'ai rencontré le Mexique et j'y ai passé deux des plus belles années de ma vie. <br>
-                                    J’y ai retrouvé une version caliente de mon Sud.<br><br> 
-                                    
-                                    La richesse et la diversité de la cuisine est extraordinaire et change d’une région à l’autre, elle évolue au fil du temps et selon gens que l’on croise.<br>
-    
-                                    L'art de vivre à la mexicaine est indescriptible, il faut y être pour le ressentir pleinement.<br><br>
-                                    Il y a 1 an, nous avons lancé l’aventure JAJAJA. <br><br>
-    
-                                    D'abord, une taqueria mobile pour distribuer des tacos Al Pastor en festival, puis finalement un restaurant dans le 11ème, piloté par mon ami venu tout droit de Oaxaca : Andres. <br>
-                                    En bons épiciers, nous avons aussi développé une gamme d'une dizaine de produits, disponible (presque) partout.<br>
-    
-                                    Notre but : apporter la magie mexicaine au plus grand nombre.<br>
-                                    Le fil rouge : VITAMINA T = TACOS- TOSTADAS - TEQUILA – TORTAS<br>
-                                    Mon allié : Olivier, mon compadre.<br><br>
-    
-                                    Notre chef : Andres, el fuego from là-bas.
-                            </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="jajaja-sections-nav">
+            <div class="jajaja-sections-nav" id="jajaja-sections-nav-2">
                 <div class="jajaja-section-prev">
                     <a href="#jajaja-section-txt-1" id="jajaja-2-1"><i class="fi fi-rr-angle-circle-up" ></i></a>
                 </div>
@@ -352,41 +298,65 @@
                     <a href="#jajaja-section-txt-3"><i class="fi fi-rr-angle-circle-down" id="jajaja-2-3"></i></a>
                 </div>
             </div>
+            <div class="container">
+                <div class="row jajaja-section-container">
+                    <div class="col-lg-4 jajaja-section-left">
+                        <img class="" src="./public/img/BG/JAJAJA-BG-BLUE.png" alt="" srcset="">
+                    </div>
+                    <div class="col-lg-8 jajaja-section-right">
+                        <div class="jajaja-section-right-p">
+                           <p> Le Mexique,<br>
+                            un début de soirée :<br>
+                            écoute ce son, c’est la vie.<br>
+                            Un son qui vient du cœur<br>
+                            d’avantage que de l’esprit.<br>
+                            Un ami. Deux amis.<br>
+                            Toute la rue en folie.<br>
+                            Un bruit qui ne triche pas,<br>
+                            que l’on n’arrête pas.<br>
+                            Imprévisible. Extravagant.<br>
+                            Ici, on mange, on boit comme on rit.<br>
+                            À plusieurs, à pas d’heure :<br>
+                            tacos, tequila, tostadas y mucho mas...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
         </section>
         
                 <!-- SECTION 3) -->
 
                 <section class="jajaja-section-txt" id="jajaja-section-txt-3">
-
-                <div class="container">
-                    <div class="row jajaja-section-txt-title">
-                        <h1>LA TAQUERIA</h1>
-                    </div>
-                    <div class="row jajaja-section-txt-content">
-                            <div class=" col-lg-6 jajaja-bg-color-block pb-5 text-center">
-                                <h2 class="jajaja-fts-2">What we do </h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
-                            </div>
-                            <div class="col-lg-6 jajaja-swiper-slide-mid pb-5 text-center">
-                                <h2 class="">How we are</h2>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni excepturi, ab in numquam incidunt quas est modi animi provident qui, cum eligendi quis recusandae quaerat labore natus explicabo amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nulla quos alias ut, mollitia quo dolores voluptatibus modi sunt, expedita quas ipsa maiores sequi magnam eius, vitae repellat placeat nobis. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod praesentium voluptatum dolor sequi perferendis, est libero labore facilis <br> similique, quas, a dolorem provident error </p>
-                            </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-7">
-                            <img class="" src="./public/img/BG/bg-kodak.png" alt="" srcset="">
-                        </div>
-                        <div class="col-md-5">
-                            <img class='jajaja-img-max-width'src="./public/img/BG/JAJAJA-BG-ORANGE.png" alt="" srcset="">
+                    <div class="jajaja-sections-nav" id="jajaja-sections-nav-3">
+                        <div class="jajaja-section-prev">
+                            <a href="#jajaja-section-txt-2" id="jajaja-2-1"><i class="fi fi-rr-angle-circle-up" ></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="jajaja-sections-nav">
-                    <div class="jajaja-section-prev">
-                        <a href="#jajaja-section-txt-2" id="jajaja-3-2"><i class="fi fi-rr-angle-circle-up" ></i></a>
+                    <div class="container">
+                        <div class="row jajaja-section-container">
+                            <div class="col-lg-8 jajaja-section-left">
+                                <img class="" src="./public/img/png/OBIJUANKENOBI.png" alt="" srcset="">
+                            </div>
+                            <div class="col-lg-4 jajaja-section-right">
+                                <div class="jajaja-section-right-p">
+                                    <h1>TAQUERIA</h1>
+                                    <h4>7, rue Lacharrière<br>
+                                        75011 PARIS</h4>
+                                    <h5>SOIR</h5><br>
+                                    <p>mercredi - samedi</p>
+                                    <p>18h30 - 1h</p>
+                                    <h5>MIDI</h5><br>
+                                    <p>samedi</p>
+                                    <p>12h - 14h30</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                    </div>
+                    
+                </section>
 
     <!-- POPUP CORBEILLE -->
 
@@ -407,13 +377,13 @@
         <div class="popup popup-container popup-corbeille-container">
             <div class="row">
                 <div class="jajaja-background-corbeille">
-                    <img src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <img onclick="openPopupPhoto1()" src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
                     <div class="jajaja-background-text">
                         <p>revengeofthetacos.jpeg</p>
                     </div>
                 </div>
                 <div class="jajaja-background-corbeille">
-                    <img src="./public/img/KODAK/16.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <img onclick="openPopupPhoto2()" src="./public/img/KODAK/16.jpg" alt="" class="jajaja-corbeille-background-container">
                     <div class="jajaja-background-text">
                         <p>flou.jpeg</p>
                     </div>
@@ -421,19 +391,36 @@
             </div>
             <div class="row">
                 <div class="jajaja-background-corbeille">
-                    <img src="./public/img/KODAK/27.jpg" alt="" class="jajaja-corbeille-background-container">
+                    <img onclick="openPopupPhoto3()"  src="./public/img/KODAK/27.jpg" alt="" class="jajaja-corbeille-background-container">
                     <div class="jajaja-background-text">
                         <p>party.jpeg </p>
                     </div>
                 </div>
-                <div class="jajaja-background-corbeille">
-                    <img src="./public/img/KODAK/8.jpg" alt="" class="jajaja-corbeille-background-container">
+                <div  class="jajaja-background-corbeille">
+                    <img onclick="openPopupPhoto4()" src="./public/img/KODAK/8.jpg" alt="" class="jajaja-corbeille-background-container">
                     <div class="jajaja-background-text">
                         <p>wallpaper.jpeg</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="popup-photo" id="popup-photo-1"> 
+            <div class="close-popup-photo" onclick="closePopupPhoto1()">&times;</div>                   
+            <img src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
+        </div>
+        <div class="popup-photo" id="popup-photo-2"> 
+            <div class="close-popup-photo" onclick="closePopupPhoto2()">&times;</div>                   
+            <img src="./public/img/KODAK/16.jpg" alt="" class="jajaja-corbeille-background-container">
+        </div>
+        <div class="popup-photo" id="popup-photo-3"> 
+            <div class="close-popup-photo" onclick="closePopupPhoto3()">&times;</div>                   
+            <img src="./public/img/KODAK/27.jpg" alt="" class="jajaja-corbeille-background-container">
+        </div>
+        <div class="popup-photo" id="popup-photo-4"> 
+            <div class="close-popup-photo" onclick="closePopupPhoto4()">&times;</div>                   
+            <img src="./public/img/KODAK/8.jpg" alt="" class="jajaja-corbeille-background-container">
+        </div>
+        <div class="popup-photo"></div>
     </div>
 
 
@@ -455,13 +442,18 @@
 
     <!-- POPUP CONTACT -->
     <div class="popup-contact popup-contact-wrapper popup jajaja-draggable box" onclick="bringToFront(this)">
-        <header class="modal-contact-header">
+        <header class="popup-header" id="header-hit">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
-                <span onclick="closePopupContact()" class="jajaja-header-circle close-btn" id="contact-close-btn" ></span>
+                <span class="jajaja-header-circle close-btn" id="hit-close-btn" onclick="closePopupContact()"></span>
                 <span class="jajaja-header-circle"></span>
                 <span class="jajaja-header-circle"></span>
             </div>
+            <div class="line-container">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
         </header>
             <div class="jajaja-contact-content">
                 <h2>SEND BUENA ONDA</h2>
@@ -759,6 +751,31 @@
             </div>
         </div>
     </div>
+    <div class="popup-taqueria" id="popup-taqueria">
+        <header class="modal-bg-header jajaja-popup-header">
+            <div class="drag-handle"></div>
+            <div class="jajaja-header-btns">
+                <span class="jajaja-header-circle" onclick="closePopupTaqueria()" id="modal-bg-close"></span>
+                <span class="jajaja-header-circle"></span>
+                <span class="jajaja-header-circle"></span>
+            </div>
+            <div class="line-container">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
+        </header>
+        <div class="popup-taqueria-content">
+            <p>7, rue Lacharrière<br>
+                75011 PARIS <br>
+                SOIR <br>
+                mercredi - samedi <br>
+                18h30 - 1h <br>
+                MIDI <br>
+                samedi <br>
+                12h- 14h30</p>
+        </div>
+    </div>
 
 
 
@@ -773,6 +790,85 @@
     <script type="text/javascript"  src="./public/js/popup.js" async></script>
     <script type="text/javascript" src="./public/js/caroussel.js" async></script>
     <script src="./public/js/features.js"></script>
+
+    <script>
+        const popupTaqsueria = document.getElementById('popup-taqueria');
+        const popupPhoto1 = document.getElementById('popup-photo-1');
+        const popupPhoto2 = document.getElementById('popup-photo-2');
+        const popupPhoto3 = document.getElementById('popup-photo-3');
+        const popupPhoto4 = document.getElementById('popup-photo-4');
+
+        function openPopupTaqueria(){
+            popupTaqsueria.style.display = 'block'
+        }
+
+        function closePopupTaqueria(){
+            popupTaqsueria.style.display = 'none'
+        }
+        
+        function openPopupPhoto1(){
+            popupPhoto1.style.display = 'block'
+        }
+
+        function openPopupPhoto2(){
+            popupPhoto2.style.display = 'block'
+        }
+
+        function openPopupPhoto3(){
+            popupPhoto3.style.display = 'block'
+        }
+
+        function openPopupPhoto4(){
+            popupPhoto4.style.display = 'block'
+        }
+
+        function closePopupPhoto1(){
+            popupPhoto1.style.display = 'none'
+        }
+
+        function closePopupPhoto2(){
+            popupPhoto2.style.display = 'none'
+        }
+        function closePopupPhoto3(){
+            popupPhoto3.style.display = 'none'
+        }
+        function closePopupPhoto4(){
+            popupPhoto4.style.display = 'none'
+        }
+
+        // MODAL HIT
+
+const modalHitWrapper = document.querySelector("#popup-hit"),
+ModalHitHeader = modalHitWrapper.querySelector("#header-it");
+
+
+
+function openRecipeHit() {
+  modalHitWrapper.style.display = 'block';
+};
+
+function  closeRecipeHit() {
+  modalHitWrapper.style.display = 'none';
+};
+
+const passwordInput = document.getElementById("password");
+const submitButton = document.querySelector(".taco-club-submit");
+const errorMessage = document.getElementById("error-message");
+const closeMessage = document.getElementById("close-message");
+
+submitButton.addEventListener("click", function(event) {
+  if (passwordInput.value.trim() !== "") {
+    errorMessage.style.display = "block";
+    event.preventDefault(); 
+  }
+});
+
+
+closeMessage.addEventListener("click", function() {
+  errorMessage.style.display = "none";
+});
+
+    </script>
 <script>
     // RIGHT CLICK
 
@@ -1112,44 +1208,6 @@ function miseAJourHeure() {
 }
 
 miseAJourHeure();
-
-// MODAL HIT
-
-const modalHitWrapper = document.querySelector("#popup-hit"),
-ModalHitHeader = modalHitWrapper.querySelector("#header-it");
-
-
-
-function openRecipeHit() {
-  modalHitWrapper.style.display = 'block';
-};
-
-function  closeRecipeHit() {
-  modalHitWrapper.style.display = 'none';
-};
-
-const passwordInput = document.getElementById("password");
-const submitButton = document.querySelector(".taco-club-submit");
-const errorMessage = document.getElementById("error-message");
-const closeMessage = document.getElementById("close-message");
-
-submitButton.addEventListener("click", function(event) {
-  if (passwordInput.value.trim() !== "") {
-    errorMessage.style.display = "block";
-    event.preventDefault(); 
-  }
-});
-
-
-closeMessage.addEventListener("click", function() {
-  errorMessage.style.display = "none";
-});
-
-
-
-
-
-        
 
     </script>
     <script>
