@@ -44,9 +44,7 @@ html {
 
 body{
   width: 100%;
-  overflow: hidden;
-  background-color: rgb(215, 37, 71);
-  ;
+  // overflow: hidden;
 }
 
 h1,h2,h3,h4,h5{
@@ -1024,6 +1022,30 @@ input[type="range"]::-webkit-slider-thumb {
         }
 
       }
+
+      .jajaja-playlists{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(204, 33, 28);
+        overflow: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .playlist-container{
+          margin: 0 2rem;
+          img{
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            transform: scale(1);
+          }
+
+          img:hover{
+            transform: scale(1.03);
+          }
+        }
+      }
+
+
 
     
       // 5) MODAL ALL RECIPES WRAPPER
@@ -2236,40 +2258,6 @@ input[type="range"]::-webkit-slider-thumb {
 
       
 
-// MEDIA QUERIES
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 768px) {
-  .jajaja-wrapper{width: 90%;top: 50%;left: 50%;height: 85vh;max-width: 100%;z-index: 1;
-  .jajaja-swiper{.jajaja-swiper-slide{color: #e63329;}}};
-  .jajaja-fts-10{font-size: 400%};
-  #jajaja-swiper-slide-1{flex-direction: column;text-align: center; .jajaja-swiper-slide-left{width: 100%}.jajaja-swiper-slide-right{text-align: center; width: 100%}};
-  #popup{width: 100%;}
-}
-
-@media only screen and (max-width: 1200px) {
-  .jajaja-section-1{position: static;}
-}
-
-@media only screen and (min-width: 1200px) {
-  .jajaja-desktop-icons{position: absolute;right: -10rem}
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .jajaja-section-txt{font-size: xx-small;}
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
-
-
 
 
 // KEYFRAME
@@ -2344,4 +2332,61 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
+// MEDIA QUERIES 
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  .jajaja-wrapper{width: 90%;top: 50%;left: 50%;height: 85vh;max-width: 100%;z-index: 1;
+  .jajaja-swiper{.jajaja-swiper-slide{color: #e63329;}}};
+  .jajaja-fts-10{font-size: 400%};
+  #jajaja-swiper-slide-1{flex-direction: column;text-align: center; .jajaja-swiper-slide-left{width: 100%}.jajaja-swiper-slide-right{text-align: center; width: 100%}};
+  #popup{width: 100%;}
+  .jajaja-section-1{
+    background-size:cover;
+    background-position:center;
+  background-repeat: no-repeat;} 
+  .jajaja-desktop-icons{
+    width: 30%;
+  }
+  .popup-corbeille, .popup-photo, #popup-hit, #popup-clock, .popup-taqueria{
+    width: 90%;
+    top: 10vh;
+    left: 5%;
+  }
+
+  .popup-background{
+    width: 90rem !important;margin: auto;
+  }
+  .close-popup-photo{
+      top: 1px !important;
+      left: 90% !important;
+  }
+
+  .burger-shower{
+
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .jajaja-section-1{position: static;}
+}
+
+@media only screen and (min-width: 1200px) {
+  .jajaja-desktop-icons{position: absolute;right: -10rem}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .jajaja-section-txt{font-size: xx-small;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
 

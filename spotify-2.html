@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Playlist Viewer</title>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+
+</head>
+<body>
+
+<div id="playlists-container"></div>
+
+<script>
+// Récupérez le token d'accès depuis le local storage
+const accessToken = localStorage.getItem('access_token');
+
+if (accessToken) {
+    // URL de l'API Spotify pour obtenir les playlists de l'utilisateur
+    const playlistsUrl = 'https://api.spotify.com/v1/me/playlists';
+
+    fetch(playlistsUrl, {
+        headers: {
+            'Authorization': `Bearer ${accessToken}`
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const playlistsContainer = document.getElementById('playlists-container');
+        
+        // Parcourez les playlists et affichez les images et les titres
+        data.items.forEach(playlist => {
+            const playlistItem = document.createElement('div');
+            playlistItem.classList.add('playlist-item');
+
+            // Image de la playlist
+            const playlistImage = document.createElement('img');
+            playlistImage.src = playlist.images[0].url; // Prenez la première image de la playlist
+            playlistImage.alt = playlist.name;
+            playlistItem.appendChild(playlistImage);
+
+            // Titre de la playlist
+            const playlistTitle = document.createElement('p');
+            playlistTitle.textContent = playlist.name;
+            playlistItem.appendChild(playlistTitle);
+
+            playlistsContainer.appendChild(playlistItem);
+        });
+    })
+    .catch(error => {
+        console.error('Erreur lors de la récupération des playlists :', error);
+    });
+} else {
+    // Gérer le cas où le token d'accès n'est pas disponible
+    console.error('Le token d\'accès Spotify est manquant.');
+}
+
+// Définissez la fonction onSpotifyWebPlaybackSDKReady
+window.onSpotifyWebPlaybackSDKReady = () => {
+    const token = accessToken; // Remplacez par le token d'accès valide
+    const player = new Spotify.Player({
+        name: 'Mon lecteur Spotify',
+        getOAuthToken: cb => {
+            cb(token);
+        }
+    });
+
+    // Connectez-vous au lecteur
+    player.connect().then(success => {
+        if (success) {
+            console.log('Connecté au lecteur Spotify');
+        }
+    });
+};
+</script>
+</body>
+</html>
