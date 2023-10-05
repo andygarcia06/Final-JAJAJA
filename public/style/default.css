@@ -11454,7 +11454,7 @@ input[type="range"]::-webkit-slider-thumb {
       transform: scale(1.6);
       margin-top: 2vh !important; }
 
-  .popup-corbeille, .popup-contact, .popup-photo, #popup-hit, #popup-clock {
+  .popup-corbeille, .popup-contact, .popup-music-wrapper, .popup-photo, #popup-hit, #popup-clock {
     width: 50%;
     top: 10vh;
     left: 5%; }
