@@ -24,7 +24,7 @@
 
 </head>
 <body class="jajaja-body" onload="windowNotMuted()">
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div class="jajaja-preloader-img">
             <img src="./public/img/png/SUN.png" alt="" srcset="">
         </div>
@@ -41,7 +41,7 @@
         </div>
         <input type="range" class="" id="progressbar-jajaja" min="0" max="100" value="0" step="1">
         <p id="jajaja-preloader-text">Loading Buena Onda</p>
-    </div> -->
+    </div>
 
 
     <section class="jajaja-section-main">   
@@ -56,12 +56,11 @@
                     <path d="M271.4 19.3C270.5 8.5 261.4 0 250.4 0C238.8 0 229.4 9.4 229.3 21V21.1V93.1H248.6V64.3H252.2V93.1H271.5V21.1C271.5 20.5 271.5 19.9 271.4 19.3ZM248.6 21.1C248.6 20.1 249.4 19.3 250.4 19.3C251.4 19.3 252.2 20.1 252.2 21.1V44.4H248.6V21.1V21.1Z"></path>
                     <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
                 </svg>
-                <!-- <ul class="nav-items">
+                <ul class="nav-items">
                   <li><a href="#" id="jajaja-homeLink" >Home</a></li>
                   <li><a href="#" id="jajaja-volume" onclick="openVolumeControler()">Volume</a>
                     <div class="volume-control volume-bar">
                         <input type="range" id="customRange" class="jajaja-volume-input">
-               
                     </div>
                 </li>
                   <li><a class="fullscreen-btn" href="#">Fullscreen</a></li>
@@ -70,26 +69,29 @@
                   <div class="jajaja-nav-hour-container ">
                     <a id="jajaja-nav-hour" class="nav-link text-primary current-date">Hour<span></a>
                 </div>
-                </ul> -->
+                </ul>
                 <input type="checkbox" id="hamburger-input" class="burger-shower" />
                 <label id="hamburger-menu" for="hamburger-input">
                 <nav id="sidebar-menu">
                     <h3>JAJAJA</h3>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="#" id="jajaja-homeLink">Home</a>                        
+                            <a href="#jajaja-section-main" id="jajaja-homeLink">Home</a>                        
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link text-primary jajaja-mute" onclick="openVolumeControler()">
+                                <div class="volume-control volume-bar">
+                                    <input type="range" id="customRange" class="jajaja-volume-input">
+                                </div>Volume</a>
+                        </li> -->
+                        <li class="nav-item fullscreen-btn-burger">
+                            <a class="nav-link text-primary ">Fullscreen</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-primary jajaja-mute">Volume</a>
+                            <a class="to-next-section nav-link text-primary"  href="#jajaja-section-txt-1" id="jajaja-bio">Bio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary">Fullscreen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="to-next-section nav-link text-primary"  href="#jajaja-section-2" id="jajaja-bio">Bio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  text-primary">Contact</a>
+                            <a class="nav-link  text-primary" onclick="contactTrigger()">Contact</a>
                         </li>
                         </ul>
                 </nav>
@@ -101,7 +103,7 @@
 
         <main class="jajaja-section-1">
             <div class="row">
-                <div class="jajaja-main-modal-container col-md-9">
+                <div class="jajaja-main-modal-container">
                     <div class="wrapper jajaja-wrapper popup jajaja-draggable" onclick="bringToFront(this)">
                         <header class="jajaja-modal-header">
                             <div class="drag-handle"></div>
@@ -116,7 +118,7 @@
                                 <div class="line line3"></div>
                               </div>
                         </header>
-                        <div class="content">
+                        <div class="wrapper-content">
                         <div class="icon">                   
                             <svg class="svg-jajaja" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(230, 51, 42);">
                                 <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
@@ -134,12 +136,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="jajaja-desktop-icons col-md-3">
+                <div class="jajaja-desktop-icons">
                     <div class="jajaja-icons">
                         <div class="jajaja-icon">
                             <div class="jajaja-icon-img" onmousedown="dragElement(this)">
                                 <div onclick='openRecipeModal()' class="jajaja-icon-img-container" id="open-modal-recipe">
-                                    <img  class="jajaja-dektop-icon" src="./public/img/PIXELS/desktop-icons/resized/tacos.png" alt="Tacos">
+                                    <img  class="jajaja-dektop-icon" loading="lazy" src="./public/img/PIXELS/desktop-icons/resized/tacos.png" alt="Tacos">
                                     <div class="jajaja-icon-name" id="jajaja-icon-tacos-text" ><p class="jajaja-icon-name-text">RECETTES</p></div>
                                 </div>
                             </div>
@@ -147,7 +149,7 @@
                         <div class="jajaja-icon" onclick="openPopupTaqueria()" >
                             <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
                                 <div class="jajaja-icon-img-container">
-                                    <img class="jajaja-dektop-icon" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/resized/cactus.png" alt="Cactus">
+                                    <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/resized/cactus.png" alt="Cactus">
                                     <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">TAQUERIA</p></div>
                                 </div>
                             </div>
@@ -342,7 +344,7 @@
                             <div class="col-lg-4 jajaja-section-right">
                                 <div class="jajaja-section-right-p">
                                     <h1>TAQUERIA</h1>
-                                    <h4>7, rue Lacharrière<br>
+                                    <h4>7, rue Lacharrière,
                                         75011 PARIS</h4>
                                     <h5>SOIR</h5><br>
                                     <p>mercredi - samedi</p>
@@ -360,7 +362,7 @@
 
     <!-- POPUP CORBEILLE -->
 
-    <div class="popup-corbeille box popup jajaja-draggable">
+    <div class="popup-corbeille box popup jajaja-draggable" onclick='bringToFront(this)'>
         <header class="modal-bg-header jajaja-popup-header">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
@@ -374,7 +376,7 @@
                 <div class="line line3"></div>
               </div>
         </header>
-        <div class="popup popup-container popup-corbeille-container">
+        <div class="popup popup-container popup-corbeille-container " >
             <div class="row">
                 <div class="jajaja-background-corbeille">
                     <img onclick="openPopupPhoto1()" src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
@@ -404,19 +406,19 @@
                 </div>
             </div>
         </div>
-        <div class="popup-photo" id="popup-photo-1"> 
+        <div class="popup-photo jajaja-draggable" id="popup-photo-1" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto1()">&times;</div>                   
             <img src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
-        <div class="popup-photo" id="popup-photo-2"> 
+        <div class="popup-photo jajaja-draggable" id="popup-photo-2" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto2()">&times;</div>                   
             <img src="./public/img/KODAK/16.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
-        <div class="popup-photo" id="popup-photo-3"> 
+        <div class="popup-photo jajaja-draggable" id="popup-photo-3" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto3()">&times;</div>                   
             <img src="./public/img/KODAK/27.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
-        <div class="popup-photo" id="popup-photo-4"> 
+        <div class="popup-photo jajaja-draggable" id="popup-photo-4" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto4()">&times;</div>                   
             <img src="./public/img/KODAK/8.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
@@ -576,8 +578,8 @@
                 <div class="line line3"></div>
               </div>
         </header>
-            <div class="jajaja-music-soon-content">
-                <p> coming soon !</p>
+            <div class="jajaja-music-soon-content ">
+                <iframe src="./spotify-frame.html" frameborder="0"></iframe>
             </div>
 
     </div>  
@@ -751,7 +753,7 @@
             </div>
         </div>
     </div>
-    <div class="popup-taqueria" id="popup-taqueria">
+    <div class="popup-taqueria jajaja-draggable" id="popup-taqueria" onclick='bringToFront(this)'>
         <header class="modal-bg-header jajaja-popup-header">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
@@ -766,7 +768,7 @@
               </div>
         </header>
         <div class="popup-taqueria-content">
-            <p>7, rue Lacharrière<br>
+            <p>7, rue Lacharriere<br>
                 75011 PARIS <br>
                 SOIR <br>
                 mercredi - samedi <br>
@@ -790,6 +792,13 @@
     <script type="text/javascript"  src="./public/js/popup.js" async></script>
     <script type="text/javascript" src="./public/js/caroussel.js" async></script>
     <script src="./public/js/features.js"></script>
+
+    <script>
+        const socialModal = document.querySelector('.modal-social-wrapper')
+        function openSocialModal(){
+            socialModal.style.display = 'block'
+        }
+    </script>
 
     <script>
         const popupTaqsueria = document.getElementById('popup-taqueria');
@@ -1240,6 +1249,7 @@ function getHighestZIndex() {
 }
 
     </script>
+
     
 
 

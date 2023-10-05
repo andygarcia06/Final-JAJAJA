@@ -201,24 +201,63 @@ function createSpotifyPlayer(playlist_uri) {
     iframe.setAttribute('allowtransparency', 'true');
     iframe.setAttribute('allow', 'encrypted-media');
     iframe.setAttribute('class', 'iframe-image');
-    iframe.style.display = 'none'
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0'
+    iframe.style.left = '0'
+    iframe.style.width = '100%',
+    iframe.style.height = '400vh'
     playerContainer.appendChild(iframe);
+
+    const timesElement = document.createElement('span');
+
+    timesElement.innerHTML = '&times;';
+    
+    document.body.appendChild(timesElement);
+    timesElement.style.position = 'absolute'
+    timesElement.style.zIndex = '500000000'
+    timesElement.style.width = '50rem !important';
+    timesElement.style.color = 'white';
+    timesElement.style.left = '95%'
+    timesElement.style.cursor = 'pointer';
+    
+    timesElement.addEventListener('click',()=>{
+      iframe.style.display = 'none'
+      timesElement.style.display = 'none';
+    })
   }
 }
 
 
 
+
+
+
+
+
 // Utilisez la fonction createSpotifyPlayer avec l'URI de votre playlist
-createSpotifyPlayer('1gi1UEW95ygwp1Hi9bNNTZ');
-createSpotifyPlayer('2r53F197NVkiTlTjSpwkIC');
-createSpotifyPlayer('0lVCaNuQ9xl3KcPf7Z3CDV');
+// createSpotifyPlayer('1gi1UEW95ygwp1Hi9bNNTZ');
+// createSpotifyPlayer('2r53F197NVkiTlTjSpwkIC');
 
 const elements = document.getElementsByClassName("playlist-image");
 
 if (elements.length >= 3) {
+  const premierElement = elements[0];
+  const deuxiemeElement = elements[1];
     const troisiemeElement = elements[2];
+
+    premierElement.addEventListener('click',() =>{
+      createSpotifyPlayer('2r53F197NVkiTlTjSpwkIC');
+    });
+
+    deuxiemeElement.addEventListener('click',() =>{
+      createSpotifyPlayer('1gi1UEW95ygwp1Hi9bNNTZ');
+    })
+
+  
     troisiemeElement.addEventListener('click',() =>{
-      alert('Hello');
+      // alert('Hello');
+      createSpotifyPlayer('0lVCaNuQ9xl3KcPf7Z3CDV');
+
     })
     console.log(troisiemeElement);
 
