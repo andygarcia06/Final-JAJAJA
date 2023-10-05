@@ -553,7 +553,7 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     .jajaja-section-left{
-      background-color: red;
+      // background-color: red;
 
       p{
         font-size: 150% !important;
@@ -645,7 +645,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   //  POPUP TAQUERIA
   .popup-taqueria{
-    display: block;
+    display: none;
     position: absolute;
     top: 20%;
     left: 5vh;
@@ -2394,7 +2394,7 @@ input[type="range"]::-webkit-slider-thumb {
     background-position:center;
   background-repeat: no-repeat;} 
 
-  .popup-corbeille,.popup-contact, .popup-photo, #popup-hit, #popup-clock, .popup-taqueria{
+  .popup-corbeille,.popup-contact, .popup-photo,.popup-music-wrapper, #popup-hit, #popup-clock, .popup-taqueria{
     width: 90% !important;
     top: 10vh;
     left: 5%;
@@ -2413,6 +2413,7 @@ input[type="range"]::-webkit-slider-thumb {
   .jajaja-wrapper{
     width: 80% !important;
     height: 30vh;
+    top: 30vh;
   }
 
   .nav-items{
