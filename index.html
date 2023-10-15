@@ -140,7 +140,7 @@
                     <div class="jajaja-icons">
                         <div class="jajaja-icon">
                             <div class="jajaja-icon-img" onmousedown="dragElement(this)">
-                                <div onclick='openRecipeModal()' class="jajaja-icon-img-container" id="open-modal-recipe">
+                                <div onclick='openRecipe()' class="jajaja-icon-img-container" id="open-modal-recipe">
                                     <img  class="jajaja-dektop-icon" loading="lazy" src="./public/img/PIXELS/desktop-icons/resized/tacos.png" alt="Tacos">
                                     <div class="jajaja-icon-name" id="jajaja-icon-tacos-text" ><p class="jajaja-icon-name-text">RECETTES</p></div>
                                 </div>
@@ -189,13 +189,23 @@
                     </div>
                 </div>
             </div>
+            <div class="jajaja-dektop-game-icon">
+                <div class="jajaja-icon"  onmousedown="dragElement(this)">
+                    <div class="jajaja-icon-img">
+                        <div class="jajaja-icon-img-container" onclick="openPopupPacman()">
+                            <img class="jajaja-dektop-icon"  src="./public/img/PIXELS/game.png" alt="Sauce">
+                            <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">JEUX</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="modal-recipe-wrapper popup jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)">
+            <div id="modal-recipe-wrapper" class="modal-recipe-wrapper popup jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)">
                 <header class="modal-recipe-header jajaja-modal-header">
                     <div class="drag-handle"></div>
 
                     <div class="jajaja-header-btns">
-                        <span onclick="closeRecipeModal()" class="jajaja-header-circle modal-recipe-close-btn"></span>
+                        <span onclick="closeRecipe()" class="jajaja-header-circle modal-recipe-close-btn"></span>
                         <span class="jajaja-header-circle"></span>
                         <span class="jajaja-header-circle"></span>
                     </div>
@@ -208,7 +218,7 @@
                     
                 </header>
                 <div class="modal-recipe-content  jajaja-modal-content">
-                <iframe src="././public/recipes/alpastore.html" frameborder="0"></iframe>
+                <iframe src="./recipes.html" frameborder="0"></iframe>
                 </div>
 
             <div class="modal-recipe-howto-wrapper">
@@ -428,17 +438,22 @@
 
     <!-- POPUP PACMAN -->
 
-    <div class="popup-pacman popup popup-pacman-wrapper box" onclick="bringToFront(this)">
-        <header class="modal-pacman-header">
+    <div class="jajaja-draggable popup-pacman popup popup-pacman-wrapper box" onclick="bringToFront(this)">
+        <header class="modal-pacman-header jajaja-popup-header">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
-                <span class="jajaja-header-circle close-btn" id="pacman-close-btn"></span>
+                <span class="jajaja-header-circle close-btn" id="pacman-close-btn" onclick="closePopupPacman()"></span>
                 <span class="jajaja-header-circle"></span>
                 <span class="jajaja-header-circle"></span>
             </div>
+            <div class="line-container">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+              </div>
         </header>
         <div class="jajaja-popup-iframe">
-            <iframe src="http://localhost:8080/index.html" frameborder="0"></iframe>
+            <iframe src="./public/pacman/pacman-intro.html" frameborder="0"></iframe>
         </div>
     </div>  
 
@@ -798,6 +813,8 @@
         function openSocialModal(){
             socialModal.style.display = 'block'
         }
+
+
     </script>
 
     <script>
@@ -1192,31 +1209,7 @@ const preloader = document.getElementById('preloader');
 const images = preloader.getElementsByTagName('img');
 const delay = 200; // délai en millisecondes entre chaque image    
 
-// HOUR
 
-const heureDiv = document.getElementById('jajaja-nav-hour');
-
-function afficherHeureFrance() {
-  heureDiv.innerHTML = `France: ${new Date().toLocaleTimeString()}`;
-}
-
-function afficherHeureMexique() {
-  const offsetMexique = -5; // Fuseau horaire du Mexique : UTC-5
-  const dateMexique = new Date(new Date().getTime() + offsetMexique * 60 * 60 * 1000);
-  heureDiv.innerHTML = `Mexique: ${dateMexique.toLocaleTimeString()}`;
-}
-
-function miseAJourHeure() {
-  setInterval(function() {
-    if (heureDiv.innerHTML.includes('France')) {
-      afficherHeureFrance();
-    } else {
-      afficherHeureMexique();
-    }
-  }, 1000);
-}
-
-miseAJourHeure();
 
     </script>
     <script>
@@ -1250,6 +1243,59 @@ function getHighestZIndex() {
 
     </script>
 
+    <script>
+          // HOUR
+
+const heureDiv = document.getElementById('jajaja-nav-hour');
+
+function afficherHeureFrance() {
+  heureDiv.innerHTML = `France: ${new Date().toLocaleTimeString()}`;
+}
+
+function afficherHeureMexique() {
+  const offsetMexique = -5; // Fuseau horaire du Mexique : UTC-5
+  const dateMexique = new Date(new Date().getTime() + offsetMexique * 60 * 60 * 1000);
+  heureDiv.innerHTML = `Mexique: ${dateMexique.toLocaleTimeString()}`;
+}
+
+function miseAJourHeure() {
+  setInterval(function() {
+    if (heureDiv.innerHTML.includes('France')) {
+      afficherHeureFrance();
+    } else {
+      afficherHeureMexique();
+    }
+  }, 1000);
+}
+
+miseAJourHeure();
+    </script>
+
+    <script>
+const recipeJAJAJA = document.querySelector('#modal-recipe-wrapper');
+
+
+function openRecipe() {
+    recipeJAJAJA.style.display = 'block';};
+  
+  function  closeRecipe() {
+    recipeJAJAJA.style.display = 'none';
+  };
+    </script>
+
+    <script>
+        const pacmanPopup = document.querySelector('.popup-pacman');
+
+        function openPopupPacman(){
+            alert('pacman');
+            pacmanPopup.style.display = 'block';
+        }
+
+        function closePopupPacman(){
+            pacmanPopup.style.display = 'none';
+        }
+
+    </script>
     
 
 

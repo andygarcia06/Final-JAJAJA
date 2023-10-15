@@ -1,72 +1,188 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recettes</title>
+    <title>Recette</title>
+    <link rel="stylesheet" href="./public/style/recipe.css">
+        <!-- FLATICONS -->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-sr-rounded/css/uicons-sr-rounded.css'>
+
+        
 </head>
-<body>
-    <div id="recette-container">
-        <h1>Nom de la recette</h1>
-        <p>Description :</p>
-        <p>Nombre de personnes :</p>
-        <p>Temps de préparation :</p>
-        <ul>
-            <li>Ingrédients principaux :</li>
-        </ul>
-        <ul>
-            <li>Ingrédients :</li>
-        </ul>
-        <h2>Étapes de préparation :</h2>
-        <ol>
-            <!-- Les étapes de préparation seront ajoutées ici -->
-        </ol>
-        <h2>Photos de préparation :</h2>
+<body id="recette-container">
+    <div class="side-title">
+        <h2></h2>
+    </div>
+
+    <div id="recette-container-col">
+        <div class="recette-header">
+            <h1></h1>
+            <div class="feu-icons-container">
+                <span class="feu-icons"></span>
+            </div>
+        </div>
+        <p class="recette-description"></p>
+        <div class="recette-container-sides">
+            <div class="recette-container-side" id="recette-container-side-1">
+                <div class="recette-container-header">
+                    <p></p>
+                    <p></p>
+                </div>
+                <ul class="recette-container-ingredients">
+                    <h2></h2>
+                </ul>
+                <ul>
+                </ul>
+            </div>
+            <div class="recette-container-side" id="recette-container-side-2">
+                <ol class="bullet-item">
+                    <!-- Les étapes de préparation seront ajoutées ici -->
+                </ol>
+            </div>
+        </div>
         <div id="photos-container">
-            <!-- Les photos seront ajoutées ici -->
         </div>
     </div>
+    <div class="recettes-nav">
+        <div><a href=""><i class="fi fi-rr-angle-circle-up"></i></a></div>
+        <div><a href=""><i class="fi fi-rr-angle-circle-down"></i></a></div>
+    </div>
+
     <script>
-        // Charger le fichier JSON contenant les recettes
-fetch('./public/json/recipes.json')
-  .then(response => response.json())
-  .then(data => {
-    const recetteContainer = document.getElementById('recette-container');
-    let index = 0;
+      let recettes; 
+      let currentIndex = 0; 
+  
+      function afficherRecette(recette) {
+          const recetteContainer = document.getElementById('recette-container');
+          recetteContainer.querySelector('h1').textContent = recette.nomRecette;
+          recetteContainer.querySelector('.side-title h2').textContent = recette.typeRecette;
+          recetteContainer.querySelector('p').textContent = recette.descriptionRecrette;
+          const sides = recetteContainer.querySelectorAll('.recette-container-side p');
+          sides[0].textContent = `Nombre de personnes : ${recette.nombrePersonnes}`;
+          sides[1].textContent = `Temps de préparation : ${recette.tempsPreparation}`;
+          const etapesList = recetteContainer.querySelector('ol');
+          etapesList.innerHTML = '<h2>etapes de preparation</h2>';
+          
+          const etapesPreparation = recette.etapesPreparation;
+          etapesPreparation.forEach((etape, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${index + 1}.</strong> ${etape}`;
+            li.classList.add('step-item'); // Ajoutez la classe "step-item" à l'élément <li>
+            etapesList.appendChild(li);
+          });
+          const ingredientsList = recetteContainer.querySelector('ul');
+          ingredientsList.innerHTML = `<h2>Ingredients</h2>`;
+          recette.ingredients.forEach(ingredient => {
+              const li = document.createElement('li');
+              li.textContent = ingredient;
+              ingredientsList.appendChild(li);
+          });
 
-    // Fonction pour afficher la recette actuelle
-    function afficherRecette(index) {
-      const recette = data.recettes[index];
-      recetteContainer.querySelector('h1').textContent = recette.nom;
-      // Affichez d'autres détails de la recette ici
-    }
+          const feuIcons = recetteContainer.querySelector('.feu-icons');
+          feuIcons.innerHTML = ''; // Effacez les icônes précédentes
+      
+          if (recette.niveauPiquant === "peu") {
+              for (let i = 0; i < 1; i++) {
+                  const feuIcon = document.createElement('i');
+                  feuIcon.className = 'fi fi-rr-flame';
+                  feuIcons.appendChild(feuIcon);
+              }
+          } else if (recette.niveauPiquant === "moyen") {
+              for (let i = 0; i < 2; i++) {
+                  const feuIcon = document.createElement('i');
+                  feuIcon.className = 'fi fi-rr-flame';
+                  feuIcons.appendChild(feuIcon);
+              }
+          } else if (recette.niveauPiquant === "fort") {
+              for (let i = 0; i < 3; i++) {
+                  const feuIcon = document.createElement('i');
+                  feuIcon.className = 'fi fi-rr-flame';
+                  feuIcons.appendChild(feuIcon);
+              }
+          }
+  
+      }
 
-    // Afficher la première recette
-    afficherRecette(index);
+  
+      function chargerRecetteSuivante() {
+          if (currentIndex < recettes.length - 1) {
+              currentIndex++; 
+          }
+          const recetteSuivante = recettes[currentIndex];
+          afficherRecette(recetteSuivante); 
+      }
+  
+      function chargerRecettePrecedente() {
+          if (currentIndex > 0) {
+              currentIndex--; 
+          }
+          const recettePrecedente = recettes[currentIndex];
+          afficherRecette(recettePrecedente); 
+      }
 
-    // Écouter le défilement de la page
-    window.addEventListener('scroll', () => {
-      const scrollHeight = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.body.offsetHeight;
-
-      // Vérifiez si l'utilisateur a atteint le bas de la page
-      if((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
-        console.log('recte ++')
-        index++;
-        if (index < data.recettes.length) {
-          afficherRecette(index);
+      function detecterDefilement() {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = window.scrollY;
+    
+        if (scrollHeight - clientHeight === scrollTop) {
+          chargerRecetteSuivante();
         }
       }
-    });
-  })
-  .catch(error => {
-    console.error('Erreur de chargement du fichier JSON :', error);
-  });
+    
+      window.addEventListener('scroll', detecterDefilement);
+    
+      window.addEventListener('load', function () {
+        if (currentIndex === recettes.length - 1) {
+          window.removeEventListener('scroll', detecterDefilement);
+        }
+      });
 
+      function scrollToTop(page) {
+        if ((window.innerHeight + window.pageYOffset) === window.innerHeight) {
+          if (currentIndex > 0) {
+            currentIndex--; 
+            const recettePrecedente = recettes[currentIndex];
+            window.location.href = recettePrecedente.url;
+          }
+        }
+      }
 
-    </script>
+   
 
+      
+  
+      const boutonDown = document.querySelector('.fi-rr-angle-circle-down');
+      boutonDown.addEventListener('click', function(event) {
+          event.preventDefault(); 
+          chargerRecetteSuivante(); 
+      });
+  
+      const boutonUp = document.querySelector('.fi-rr-angle-circle-up');
+      boutonUp.addEventListener('click', function(event) {
+          event.preventDefault(); 
+          chargerRecettePrecedente(); 
+      });
+
+      
+      fetch('public/json/recipes.json')
+          .then(response => response.json())
+          .then(data => {
+              recettes = data.recettes; 
+              const recette = recettes[0];
+              afficherRecette(recette);
+          })
+          .catch(error => console.error('Erreur lors du chargement des données JSON :', error));
+  </script>
+  
+  
+  
+  
+  
+  
+  
+    
 </body>
-
 </html>

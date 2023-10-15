@@ -329,20 +329,9 @@ muteAll.addEventListener("click", function() {
   setMute(!mediaElements[0].muted); // 
 });
 
-// MODAL RECIPE
-const openModalRecipeBtn = document.querySelector('#open-modal-recipe')
-const closeModalRecipeBtn = document.querySelector('.modal-recipe-close-btn')
-const modalRecipeWrapper = document.querySelector(".modal-recipe-wrapper");
 
 
 
-function openRecipeModal() {
-    modalRecipeWrapper.style.display = 'block';
-};
-
-function closeRecipeModal() {
-    modalRecipeWrapper.style.display = 'none';
-};
 
 
 
