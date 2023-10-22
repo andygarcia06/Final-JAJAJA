@@ -28,14 +28,10 @@ function getAccessToken() {
     .then(data => {
       // Mettez à jour le contenu de la page HTML avec les informations de la playlist
       const playlistNameElement = document.getElementById('playlist-name');
-      const playlistImageElement = document.getElementById('playlist-image');
 
       // Mettez à jour le nom de la playlist
       playlistNameElement.textContent = data.name;
 
-      // Mettez à jour l'image de la playlist
-      playlistImageElement.src = data.images[0].url;
-      playlistImageElement.alt = `Image de la Playlist ${data.name}`;
     })
     .catch(error => {
       console.error('Erreur lors de la récupération des informations de la playlist :', error);
@@ -51,14 +47,10 @@ function getAccessToken() {
     .then(data => {
       // Mettez à jour le contenu de la page HTML avec les informations de la playlist
       const playlistNameElement = document.getElementById('playlist-name-2');
-      const playlistImageElement = document.getElementById('playlist-image-2');
 
       // Mettez à jour le nom de la playlist
       playlistNameElement.textContent = data.name;
 
-      // Mettez à jour l'image de la playlist
-      playlistImageElement.src = data.images[0].url;
-      playlistImageElement.alt = `Image de la Playlist ${data.name}`;
     })
     .catch(error => {
       console.error('Erreur lors de la récupération des informations de la playlist :', error);
@@ -73,14 +65,11 @@ function getAccessToken() {
     .then(data => {
       // Mettez à jour le contenu de la page HTML avec les informations de la playlist
       const playlistNameElement = document.getElementById('playlist-name-2');
-      const playlistImageElement = document.getElementById('playlist-image-2');
 
       // Mettez à jour le nom de la playlist
       playlistNameElement.textContent = data.name;
 
-      // Mettez à jour l'image de la playlist
-      playlistImageElement.src = data.images[0].url;
-      playlistImageElement.alt = `Image de la Playlist ${data.name}`;
+      
     })
     .catch(error => {
       console.error('Erreur lors de la récupération des informations de la playlist :', error);
@@ -95,14 +84,10 @@ function getAccessToken() {
     .then(data => {
       // Mettez à jour le contenu de la page HTML avec les informations de la playlist
       const playlistNameElement = document.getElementById('playlist-name-3');
-      const playlistImageElement = document.getElementById('playlist-image-3');
 
       // Mettez à jour le nom de la playlist
       playlistNameElement.textContent = data.name;
 
-      // Mettez à jour l'image de la playlist
-      playlistImageElement.src = data.images[0].url;
-      playlistImageElement.alt = `Image de la Playlist ${data.name}`;
     })
     .catch(error => {
       console.error('Erreur lors de la récupération des informations de la playlist :', error);
@@ -186,7 +171,7 @@ function loadPlaylistTracks(playlistId) {
   }
 }
 
-const playlistImages = document.querySelectorAll('.playlist-image');
+const playlistContainer = document.querySelectorAll('.playlist-image');
 
 // Incluez cette fonction pour créer le lecteur Spotify
 function createSpotifyPlayer(playlist_uri) {
@@ -238,7 +223,7 @@ function createSpotifyPlayer(playlist_uri) {
 // createSpotifyPlayer('1gi1UEW95ygwp1Hi9bNNTZ');
 // createSpotifyPlayer('2r53F197NVkiTlTjSpwkIC');
 
-const elements = document.getElementsByClassName("playlist-image");
+const elements = document.getElementsByClassName("playlist-container");
 
 if (elements.length >= 3) {
   const premierElement = elements[0];
