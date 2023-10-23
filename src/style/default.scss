@@ -44,7 +44,7 @@ html {
 
 body{
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
   background-color: rgb(215, 37, 71);
 }
 
@@ -495,6 +495,55 @@ input[type="range"]::-webkit-slider-thumb {
     }
   }
 
+  .jajaja-dektop-icons-3{
+    display: block;
+    position: absolute;
+    top: 85vh;
+    .jajaja-icons{
+      display: flex;
+      flex-direction: column;
+
+      .jajaja-icon{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 4vh;
+
+        .jajaja-icon-img{
+          text-align: center;
+          align-items: center;
+          height: 9vh;
+          width: 9rem;
+
+          .jajaja-icon-img-container{
+            margin:auto;
+
+
+            img{
+              max-width: 40%;
+              max-height: 40%;
+              cursor: pointer;
+
+            }
+          }
+        }
+
+        .jajaja-icon-name{
+          color: black !important;
+          font-family: "Helvetica Neue Bolderx2";
+          margin: auto;
+          width: 70px;
+          cursor: pointer;
+          p{
+            background-color: #FEFEE2;
+            font-size: 70% !important;
+            padding-top: 0.4vh;
+          }
+        }
+      }}
+  }
+
   //  III- JAJAJA SECTION TEXT
 
   .close-section {
@@ -723,13 +772,11 @@ input[type="range"]::-webkit-slider-thumb {
    border-radius: 10px;
    border: 2px solid black;
    background-color: white;
-   height: 30vh;
    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
    height: 40vh;
 
-   p{
-    font-family: "JAJAJA";
-    margin: 2vh 5%;
+   .modal-que-content{
+    margin: 2vh 0;
    }
 
   }
@@ -741,17 +788,13 @@ input[type="range"]::-webkit-slider-thumb {
     position: absolute;
     left: 40%;
     top: 40vh;
-    width: 25%;
     border-radius: 10px;
     border: 2px solid black;
     background-color: white;
     height: 30vh;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
-    height: 20vh;
- 
-    p{
-     font-family: "JAJAJA";
-     margin: 2vh 5%;
+    img{
+      max-width: 90%;
+      margin: 4vh 0;
     }
  
    }
@@ -762,7 +805,6 @@ input[type="range"]::-webkit-slider-thumb {
     position: absolute;
     top: 20%;
     left: 5vh;
-    width: 25%;
     border-radius: 10px;
     border: 2px solid black;
     background-color: white;
@@ -776,12 +818,10 @@ input[type="range"]::-webkit-slider-thumb {
       font-family: 'JAJAJA';
       margin: 5vh 2rem;
       color: #e63329;
-      background-color: white;
-      font-weight: 700;
+      // background-color: rgb(255, 247, 200);
       line-height: 20px;
       padding: 3px;
       border-radius: 10px;
-
     }
 
   }
@@ -796,7 +836,7 @@ input[type="range"]::-webkit-slider-thumb {
         #popup-pacman{
           display: none;
           position: absolute;
-          left: 40%;
+          left: 20%;
           top: 40vh;
           width: 25%;
           border-radius: 10px;
@@ -823,12 +863,20 @@ input[type="range"]::-webkit-slider-thumb {
           position: absolute;
           left: 40%;
           top: 40vh;
-          width: 25%;
           border-radius: 10px;
           border: 2px solid black;
           background-color: white;
           box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
-          height: 25vh;
+
+          img{
+            width: 80%;
+          }
+
+          .modal-book-content{
+            background-color: rgb(255, 247, 200);
+            margin: 3vh 5px;
+            padding: 10px;
+          }
 
           p{
             font-family: 'JAJAJA';
@@ -843,16 +891,17 @@ input[type="range"]::-webkit-slider-thumb {
           font-family: 'JAJAJA';
           border: none;
           transition:all 0.3s ease;
+          border: 2px solid #e63329;
 
           a{
             text-decoration: none;
-            color: #ffe4c4;
+            color: rgb(255, 247, 200);
           }
          }
 
          .jajaja-button-book:hover{
           transform: scale(1.04);
-          background-color: #ffe4c4;
+          background-color: rgb(255, 247, 200);
          }
 
          .jajaja-button-book:hover a{
@@ -1692,6 +1741,11 @@ input[type="range"]::-webkit-slider-thumb {
         width: 100%; /* Ajuste la largeur de la div selon vos besoins */
       }
 
+      #instafeed-container a {
+        pointer-events: none;
+        cursor: default;
+    }
+
     // 2) POPUP CLOCK
 
     #popup-clock{
@@ -2053,78 +2107,91 @@ input[type="range"]::-webkit-slider-thumb {
 
     #popup-hit{
       box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5) !important;
-      width: 30%;
       border-radius: 10px;
       position: absolute;
       display: none;
       top: 20%;
-      height: 40vh;
+      width: 15%;
+      height: 60vh;
       left: 70%;
       z-index: 1;
       text-align: center;
-      padding: 1vh 2rem;
       background-color: white;
       font-family: 'JAJAJA';
-      color:#e63329;
       border: 2px solid black;
+      color: #e63329;
+
+      button{
+        border-radius: 10px;
+        margin-top: 4vh;
+        background-color: #e63329;
+        border:2px solid #e63329;
+        width: 60%;
+        color: rgb(255, 247, 200);
+        transition: all 0.3s ease;
+      }
+
+      button:hover{
+        background-color: rgb(255, 247, 200);
+        color: #e63329;
+      }
+
+      header{
+        width: 100%;
+        border-bottom: 2px solid black;
+        height: 6vh;
+
+        .line-container{
+          width: 50% !important;
+          margin-left: 35%;
+        }
+      }
       
-      h1,h2,h3,h4,H5{
+      h1,h2,h3,h4{
 
         font-family: 'JAJAJA';
         text-align: center;
-        font-size: 280%;
+        font-size: 200%;
 
       }
 
-      #error-message{
-        display: none;
-        background-color: #e63329;
-        color:white;
-        padding: 0.5vh 1rem;
-        border: 1px solid white;
-        cursor: pointer;
-        font-size: 140%;
-        // position: absolute;
-        // top: 14vh;
-        border-radius: 2px;
-        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5) !important;        
-        z-index: 1000000;
-      }
+      .popup-content{
+        margin: 2vh 10px;
+        background-color:rgb(255, 247, 200) ;
+        height: 50vh;
 
 
-      header{
-       border-top-right-radius: 10px;
-       border-top-left-radius: 10px;
-       border-bottom: 3px solid black;
-       height: 5vh;      }
-
-       form{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-
-        input{
-          width: 50%;
-          margin: auto;
-        }
-        .taco-club-submit{
-          margin-top: 1vh;
-          background-color: #e63329;
+        #password{
+          width: 70%;
           border: none;
-          color:#fefee2 ;
-          font-size: 200%;
-          width: 30%;
-          border-radius: 5px;
-          transition: all 0.5s ease;
-          opacity: 1;
-        }
 
-        .taco-club-submit:hover{
-          opacity: 0.90;
-          transform: scale(1.02);
         }
       }
+
+    }
+
+    .popup-error-message{
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5) !important;
+      width: 100%;
+      display: none;
+      margin: 2vh 10px;
+      position: relative;
+      left: -0.2rem;
+      bottom: 15vh;
+
+
+      .error-message-content{
+        background-color:rgb(255, 247, 200) ;
+        margin: 2vh 10px;
+      }
+
+        .line-container{
+          width: 70% !important;
+          margin-left: 15%;
+        }
+
     }
 
 

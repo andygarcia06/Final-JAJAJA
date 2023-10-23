@@ -6,10 +6,17 @@
 		a img{ 
 			width: 25%;
 		}
+
+		#instafeed-container a {
+			pointer-events: none;
+			cursor: default;
+		}
 	</style>
 </head>
 <body>
     	<div id="instafeed-container" onclick="instalink()"></div>
+		<p id="account-name"></p>
+
 
 
 
@@ -19,10 +26,19 @@
 		get: 'user',
 		target: "instafeed-container",
     	resolution: 'high_resolution',
-		accessToken: 'IGQVJVbjZAzM0FmM1U5NkNtX1lVdGJyMWtMR25Ia2g5anhVSG91WDNQSnh1Mi1iUlBERkxUR3pLckh1WUp0MF9nT21hYmUzUUdTT3NyZAWRiWUxTNERRaTdJTlEtTHV5S1BqYXNoLXNKRXEzcE4yWVZAwRQZDZD',
-		limit : 9
+		accessToken: 'IGQWRORzVTNndyWnN2MlJVLWdrM2swY1gxT2QyNXRUbmhqTWVkRU1kaEk2ZA3BvMjhMYjAtbHEySkpLREhibHJMU0dUNllTLVpqamtOc0dhV2FDOEQzUFhMcTA3ZAk1xNnlpS05xTjlxSE00czdIbHV1NmlpOFhqdmcZD',
+		limit : 48,
+
 	});
 	userFeed.run();
+
+
+	
+	
+	
+	
+	
+	
 	</script>
 </body>
 </html>

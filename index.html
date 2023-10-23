@@ -29,7 +29,7 @@
             <img src="./public/img/png/SUN.png" alt="" srcset="">
         </div>
         <div class="jajaja-preloader-logo">
-            <svg viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: #E6332A;">
+            <svg viewBox="0 0 278 95" fill="rgb(230, 51, 42)" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(230, 51, 42);">
                 <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
                 <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
                 <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
@@ -104,8 +104,8 @@
         <main class="jajaja-section-1">
             <div class="row">
                 <div class="jajaja-main-modal-container">
-                    <div class="wrapper jajaja-wrapper popup jajaja-draggable" onclick="bringToFront(this)">
-                        <header class="jajaja-modal-header">
+                    <div class="wrapper jajaja-wrapper popup draggable-popup" onclick="bringToFront(this)">
+                        <header class="jajaja-modal-header popup-header-draggable">
                             <div class="drag-handle"></div>
                             <div class="jajaja-header-btns">
                                 <span class="jajaja-header-circle close-btn" onclick="closeWrapper()"></span>
@@ -146,14 +146,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="jajaja-icon" onclick="openPopupTaqueria()" >
-                            <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
-                                <div class="jajaja-icon-img-container">
-                                    <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/resized/cactus.png" alt="Cactus">
-                                    <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">TAQUERIA</p></div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="jajaja-icon" id="open-modal-pacman"onmousedown="dragElement(this)">
                             <div class="jajaja-icon-img">
                                 <div onclick="openPopupMusic()"  class="jajaja-icon-img-container">
@@ -162,59 +154,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="jajaja-icon">
-                            <div class="jajaja-icon-img" onmousedown="dragElement(this)">
-                                <div class="jajaja-icon-img-container volume"  onclick="openSocialModal()">
-                                    <img class="jajaja-dektop-icon" src="./public/img/PIXELS/desktop-icons/resized/avocado.png" alt="Cactus">
-                                    <div class="jajaja-icon-name" id="jajaja-icon-avocat-text"><p class="jajaja-icon-name-text">INSTAGRAM</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="jajaja-icon" id="jajaja-icon-1" onmousedown="dragElement(this)">
-                            <div class="jajaja-icon-img">
-                                <div class="jajaja-icon-img-container" onclick="openRecipeHit()">
-                                    <img class="jajaja-dektop-icon" id="jajaja-icon-bottle" src="./public/img/PIXELS/desktop-icons/resized/sauce.png" alt="Sauce">
-                                    <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">TACO CLUB</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="jajaja-icon"  onmousedown="dragElement(this)">
-                            <div class="jajaja-icon-img">
-                                <div class="jajaja-icon-img-container" onclick="openPopupCorbeille()">
-                                    <img class="jajaja-dektop-icon"  src="./public/img/PIXELS/desktop-icons/POUBELLE.png" alt="Sauce">
-                                    <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">CORBEILLE</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="jajaja-desktop-icons-2">
-                <div class="jajaja-icons">
-                    <div class="jajaja-icon">
-                        <div onclick="openPopupPacman()" class="jajaja-icon-img" onmousedown="dragElement(this)">
-                            <div  class="jajaja-icon-img-container" id="open-modal-recipe">
-                                <img  class="jajaja-dektop-icon" loading="lazy" src="./public/img/PIXELS/desktop-icons/tacman.png" alt="Tacos">
-                                <div class="jajaja-icon-name" id="jajaja-icon-tacos-text" ><p class="jajaja-icon-name-text">GAMES</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jajaja-icon" onclick="openPopupQue()" >
-                        <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
-                            <div class="jajaja-icon-img-container">
-                                <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/computer2.png" alt="Cactus">
-                                <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">QUE?</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jajaja-icon" onclick="openPopupCredit()" >
-                        <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
-                            <div class="jajaja-icon-img-container">
-                                <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/plaenete.png" alt="Cactus">
-                                <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">CRÉDITS </p></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="jajaja-icon" id="open-modal-pacman"onmousedown="dragElement(this)">
                         <div class="jajaja-icon-img">
                             <div onclick="openPopupBook()"  class="jajaja-icon-img-container">
@@ -223,11 +162,77 @@
                             </div>
                         </div>
                     </div>
+                    <div class="jajaja-icon" id="jajaja-icon-1" onmousedown="dragElement(this)">
+                        <div class="jajaja-icon-img">
+                            <div class="jajaja-icon-img-container" onclick="openRecipeHit()">
+                                <img class="jajaja-dektop-icon" id="jajaja-icon-bottle" src="./public/img/PIXELS/desktop-icons/resized/sauce.png" alt="Sauce">
+                                <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">TACO CLUB</p></div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="jajaja-icon" onclick="openPopupCredit()" >
+                            <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
+                                <div class="jajaja-icon-img-container">
+                                    <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/plaenete.png" alt="Cactus">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">CRÉDITS </p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jajaja-desktop-icons-2">
+                <div class="jajaja-icons">
+
+                    <div class="jajaja-icon" onclick="openPopupQue()" >
+                        <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
+                            <div class="jajaja-icon-img-container">
+                                <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/computer2.png" alt="Cactus">
+                                <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">QUE?</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jajaja-icon" onclick="openPopupTaqueria()" >
+                        <div class="jajaja-icon-img"  id="jajaja-icon-cactus">
+                            <div class="jajaja-icon-img-container">
+                                <img class="jajaja-dektop-icon" loading="lazy" id="open-modal-all-recipe" src="./public/img/PIXELS/desktop-icons/resized/cactus.png" alt="Cactus">
+                                <div class="jajaja-icon-name" id="jajaja-icon-cactus-text"><p class="jajaja-icon-name-text">TAQUERIA</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jajaja-icon">
+                        <div class="jajaja-icon-img" onmousedown="dragElement(this)">
+                            <div class="jajaja-icon-img-container volume"  onclick="openSocialModal()">
+                                <img class="jajaja-dektop-icon" src="./public/img/PIXELS/desktop-icons/resized/avocado.png" alt="Cactus">
+                                <div class="jajaja-icon-name" id="jajaja-icon-avocat-text"><p class="jajaja-icon-name-text">INSTAGRAM</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jajaja-icon">
+                        <div onclick="openPopupPacman()" class="jajaja-icon-img" onmousedown="dragElement(this)">
+                            <div  class="jajaja-icon-img-container" id="open-modal-recipe">
+                                <img  class="jajaja-dektop-icon" loading="lazy" src="./public/img/PIXELS/desktop-icons/tacman.png" alt="Tacos">
+                                <div class="jajaja-icon-name" id="jajaja-icon-tacos-text" ><p class="jajaja-icon-name-text">GAMES</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jajaja-dektop-icons-3">
+                <div class="jajaja-icons">
+                    <div class="jajaja-icon"  onmousedown="dragElement(this)">
+                        <div class="jajaja-icon-img">
+                            <div class="jajaja-icon-img-container" onclick="openPopupCorbeille()">
+                                <img class="jajaja-dektop-icon"  src="./public/img/PIXELS/desktop-icons/POUBELLE.png" alt="Sauce">
+                                <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">CORBEILLE</p></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div id="modal-recipe-wrapper" class="modal-recipe-wrapper popup jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)">
-                <header class="modal-recipe-header jajaja-modal-header">
+            <div id="modal-recipe-wrapper" class="modal-recipe-wrapper popup jajaja-wrapper draggable-popup" onclick="bringToFront(this)">
+                <header class="modal-recipe-header jajaja-modal-header popup-header-draggable">
                     <div class="drag-handle"></div>
 
                     <div class="jajaja-header-btns">
@@ -255,8 +260,8 @@
 
 
     
-            <div class="popup modal-social-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)">
-                <header class="modal-social-header jajaja-modal-header">
+            <div class="popup modal-social-wrapper jajaja-wrapper draggable-popup" onclick="bringToFront(this)">
+                <header class="modal-social-header jajaja-modal-header popup-header-draggable">
                     <div class="drag-handle"></div>
                     <div class="jajaja-header-btns">
                         <span onclick="closeInstaModal()" class="jajaja-header-circle modal-insta-close-btn"></span>
@@ -278,8 +283,8 @@
                 </div>
             </div>
 
-            <div class="popup modal-que-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)" id="modal-que-wrapper">
-                <header class="modal-que-header jajaja-modal-header">
+            <div class="popup modal-que-wrapper jajaja-wrapper draggable-popup" onclick="bringToFront(this)" id="modal-que-wrapper">
+                <header class="modal-que-header jajaja-modal-header popup-header-draggable">
                     <div class="drag-handle"></div>
                     <div class="jajaja-header-btns">
                         <span onclick="closePopupQue()" class="jajaja-header-circle modal-insta-close-btn"></span>
@@ -294,12 +299,7 @@
                       </div>
                 </header>
                 <div class="modal-que-content jajaja-modal-content">
-                    <p>Bienvenido ! Tu te rappelles des ordinateurs dans les annees 90 ? Notre
-                        site c’est pareil. Ici c’est ton bureau : tu peux y voir des icones. Tu
-                        cliques dessus et bim, ca devient des fenetres qui s'affichent sur ton
-                        ecran. C’est comme si t'ouvrais une nouvelle piece dans ta baraque. Tu
-                        peux meme les fermer avec le petit "x" en haut a gauche. Clique un peu
-                        partout, il y a des surprises. Amuse-toi bien !</p>
+                    <img src="./public/img/KODAK/popup-que.png" alt="">
                 </div>
                 <div class="modal-que-footer">
     
@@ -309,8 +309,8 @@
             
 
 
-            <div class="popup modal-credit-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)" id="modal-credit-wrapper">
-                <header class="modal-credit-header jajaja-modal-header">
+            <div class="popup  modal-credit-wrapper jajaja-wrapper draggable-popup" onclick="bringToFront(this)" id="modal-credit-wrapper">
+                <header class="modal-credit-header jajaja-modal-header popup-header-draggable">
                     <div class="drag-handle"></div>
                     <div class="jajaja-header-btns">
                         <span onclick="closePopupCredit()" class="jajaja-header-circle modal-insta-close-btn"></span>
@@ -325,27 +325,10 @@
                       </div>
                 </header>
                 <div class="modal-credit-content jajaja-modal-content">
-                    <p>site internet : FrontHand<br>
-                        photos recettes : Rebecca GENET<br>
-                        Playlists : JAJAJA</p>
-                </div>
-                <div class="modal-credit-footer">
-    
+                    <a href="https://fronthand.fr"><img src="./public/img/KODAK/popup-credit.png" alt=""></a>
                 </div>
             </div>
 
-
-    
-            <div class="popup modal-all-recipe-wrapper jajaja-wrapper" onclick="bringToFront(this)">
-                <header class="modal-all-recipe-header jajaja-modal-header">
-                    <div class="drag-handle"></div>
-                    <span class="modal-all-recipe-close-btn jajaja-modal-closer">&times;</span>
-                    <h1 class=" modal-all-recipe-title">ALL RECIPES</h1>
-                </header>
-                <div class="modal-all-recipe-content jajaja-modal-content">
-                <iframe src="./all-recipes.html" frameborder="0"></iframe>
-                </div>
-            </div>
     </main>
 </section>
 
@@ -454,8 +437,8 @@
 
     <!-- POPUP CORBEILLE -->
 
-    <div class="popup-corbeille box popup jajaja-draggable" onclick='bringToFront(this)'>
-        <header class="modal-bg-header jajaja-modal-header jajaja-popup-header">
+    <div class="popup-corbeille box popup draggable-popup" onclick='bringToFront(this)'>
+        <header class="modal-bg-header jajaja-modal-header jajaja-popup-header popup-header-draggable">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span class="jajaja-header-circle" onclick="closePopupCorbeille()" id="modal-bg-close"></span>
@@ -517,8 +500,8 @@
         <div class="popup-photo"></div>
     </div>
 
-    <div class=" jajaja-draggable popup popup-pacman jajaja-wrapper"  id="popup-pacman" onclick="bringToFront(this)">
-        <header class="modal-pacman-header jajaja-modal-header ">
+    <div class=" jajaja-draggable popup popup-pacman jajaja-wrapper draggable-popup"  id="popup-pacman" onclick="bringToFront(this)">
+        <header class="modal-pacman-header jajaja-modal-header popup-header-draggable">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span onclick="closePopupPacman()" class="jajaja-header-circle modal-insta-close-btn" id="pacman-close-btn"></span>
@@ -539,8 +522,8 @@
     </div>
 
     <!-- POPUP CONTACT -->
-    <div class="popup-contact popup-contact-wrapper popup  jajaja-draggable box" onclick="bringToFront(this)">
-        <header class="popup-header jajaja-is-draggable jajaja-modal-header jajaja-popup-header" id="header-hit">
+    <div class="popup-contact popup-contact-wrapper popup draggable-popup   box" onclick="bringToFront(this)">
+        <header class="popup-header jajaja-modal-header jajaja-popup-header popup-header-draggable" id="header-hit">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span class="jajaja-header-circle close-btn" id="hit-close-btn" onclick="closePopupContact()"></span>
@@ -554,7 +537,7 @@
               </div>
         </header>
             <div class="jajaja-contact-content">
-                <h2>SEND BUENA ONDA</h2>
+                <h2>QUE PASO ?</h2>
                 <form name="contactForm" onsubmit="return validateForm()" method="post">
                     <input type="text" id="name" name="name" placeholder="nom et prenom"><br><br>
             
@@ -567,8 +550,8 @@
             </div>
     </div>  
 
-    <div class="popup modal-book-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)" id="modal-book-wrapper">
-        <header class="modal-book-header jajaja-is-draggable jajaja-modal-header">
+    <div class="popup modal-book-wrapper jajaja-wrapper draggable-popup" onclick="bringToFront(this)" id="modal-book-wrapper">
+        <header class="modal-book-header  jajaja-modal-header popup-header-draggable">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span onclick="closePopupBook()" class="jajaja-header-circle modal-insta-close-btn"></span>
@@ -583,14 +566,14 @@
               </div>
         </header>
         <div class="modal-book-content jajaja-modal-content">
-            <h5>Ah oui, on a sorti un livre de recettes, tu peux l’acheter ici.</h5>
+            <img src="./public/img/KODAK/modal-book.png" alt="" srcset="">
             <button class="jajaja-button-book" ><a target="_blank" href=" https://www.fnac.com/a18279207/Olivier-Chini-Mexique-authentique">JE LE VEUX</a></button>
 
         </div>
     </div>
 
-            <div class="popup modal-que-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)" id="modal-que-wrapper">
-                <header class="modal-que-header jajaja-modal-header">
+            <div class="popup modal-que-wrapper jajaja-wrapper draggable-popup" onclick="bringToFront(this)" id="modal-que-wrapper">
+                <header class="modal-que-header jajaja-modal-header popup-draggable">
                     <div class="drag-handle"></div>
                     <div class="jajaja-header-btns">
                         <span onclick="closePopupQue()" class="jajaja-header-circle modal-insta-close-btn"></span>
@@ -605,75 +588,17 @@
                       </div>
                 </header>
                 <div class="modal-que-content jajaja-modal-content">
-                    <p>Bienvenido ! Tu te rappelles des ordinateurs dans les annees 90 ? Notre
-                        site c’est pareil. Ici c’est ton bureau : tu peux y voir des icones. Tu
-                        cliques dessus et bim, ca devient des fenetres qui s'affichent sur ton
-                        ecran. C’est comme si t'ouvrais une nouvelle piece dans ta baraque. Tu
-                        peux meme les fermer avec le petit "x" en haut a gauche. Clique un peu
-                        partout, il y a des surprises. Amuse-toi bien !</p>
+                    <img src="./public/img/KODAK/popup-que.png" alt="">
                 </div>
                 <div class="modal-que-footer">
     
                 </div>
             </div>
 
-    <!-- <div class="popup-contacts popup popup-contacts-wrappe  jajaja-draggable box" onclick="bringToFront(this)">
-        <header class="modal-contacts-header jajaja-modal-header">
-            <div class="drag-handle"></div>
-            <div class="jajaja-header-btns">
-                <span class="jajaja-header-circle close-btn" id="contacts-close-btn" onclick="closePopupContacts()"></span>
-                <span class="jajaja-header-circle"></span>
-                <span class="jajaja-header-circle"></span>
-            </div>
-        </header>
-            <div class="jajaja-contacts-content">
-                <div class="jajaja-contacts-section">    
-                    <a href="#"><img src="./public/img/instagram.svg" alt=""><p>Notre instagram</p></a>
-                </div>
-                <div class="jajaja-contacts-section">
-                    <a href="#"  id="#jajaja-mail-trigger"><img src="./public/img/envelope.svg" alt=""><p>Contactez-nous</p></a>
-                </div>
-            </div>
-
-            <div class="modal-book-footer">
-                
-            </div>
-    </div>  -->
-    
-    <div class="popup modal-que-wrapper jajaja-wrapper jajaja-draggable" onclick="bringToFront(this)" id="modal-que-wrapper">
-        <header class="modal-que-header jajaja-modal-header">
-            <div class="drag-handle"></div>
-            <div class="jajaja-header-btns">
-                <span onclick="closePopupQue()" class="jajaja-header-circle modal-insta-close-btn"></span>
-                <span class="jajaja-header-circle"></span>
-                <span class="jajaja-header-circle"></span>
-            </div>
-
-            <div class="line-container">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-              </div>
-        </header>
-        <div class="modal-que-content jajaja-modal-content">
-            <p>Bienvenido ! Tu te rappelles des ordinateurs dans les annees 90 ? Notre
-                site c’est pareil. Ici c’est ton bureau : tu peux y voir des icones. Tu
-                cliques dessus et bim, ca devient des fenetres qui s'affichent sur ton
-                ecran. C’est comme si t'ouvrais une nouvelle piece dans ta baraque. Tu
-                peux meme les fermer avec le petit "x" en haut a gauche. Clique un peu
-                partout, il y a des surprises. Amuse-toi bien !</p>
-        </div>
-        <div class="modal-que-footer">
-
-        </div>
-    </div>
 
 
-    <!-- POPUP SOON -->
-
-
-    <div class="popup-music popup-music-wrapper jajaja-draggable  box popup" onclick="bringToFront(this)" >
-        <header class="modal-music-header jajaja-modal-header jajaja-is-draggable">
+    <div class="popup-music popup-music-wrapper draggable-popup  box popup" onclick="bringToFront(this)" >
+        <header class="modal-music-header jajaja-modal-header popup-header-draggable">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span class="jajaja-header-circle close-btn" id="music-close-btn" onclick="closePopupMusic()"></span>
@@ -694,8 +619,8 @@
 
     <!-- /POPUP HOW IT WORKS -->
 
-    <div class="popup jajaja-draggable box" id="popup-hit" onclick="bringToFront(this)">
-        <header class="popup-header jajaja-modal-header" id="header-hit">
+    <div class="popup draggable-popup box" id="popup-hit" onclick="bringToFront(this)">
+        <header class="jajaja-modal-header  popup-header-draggable">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span class="jajaja-header-circle close-btn" id="hit-close-btn" onclick="closeRecipeHit()"></span>
@@ -708,21 +633,37 @@
                 <div class="line line3"></div>
               </div>
         </header>
-        <div class="popup-content">
+        <div class="popup-content popup-hit-content">
             <h2>TACO CLUB</h2>
+            <h5>Mot de passe</h5>
             <form>
-                <label for="password">Mot de passe :</label>
-                <input type="password" id="password" name="password">
+                <input  id="password" type="password" >
                 <br>
-                <input class="taco-club-submit" type="submit" value="Envoyer">
+                <button id="btn-send">Envoyer</button>
 
-                <div id="error-message">
-                    Si tu veux en faire partie, n'essaie pas d'en faire parti !
-                    <span id="close-message">&times;</span>
-                </div>              
+                <div class="popup error-message popup-error-message box" id="popup-error-message" onclick="bringToFront(this)">
+                    <header class="popup-header jajaja-modal-header" id="header-hit">
+                        <div class="drag-handle"></div>
+                        <div class="jajaja-header-btns">
+                            <span class="jajaja-header-circle close-btn"  id="close-message"></span>
+                            <span class="jajaja-header-circle"></span>
+                            <span class="jajaja-header-circle"></span>
+                        </div>
+                        <div class="line-container">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                          </div>
+                    </header>
+                    <div class="error-message-content">
+                        Rate !<br> tu veux<br> en faire partie?<br> N'essaie pas<br> d'en faire parti.
+                    </div>
+                </div>  
             </form>
         </div>
     </div>
+
+
 
     <!-- POPUP RIGHT CLICK BIS -->
 
@@ -738,8 +679,8 @@
                 <!-- <div class="popup-tools-icon" onclick="openPopupMusic()" ><img src="./public/img/PIXELS/ghettoblaster-big-png.png" alt=""></div> -->
             </div>
         </div>
-        <div class="popup-background box popup jajaja-draggable">
-            <header class="modal-bg-header jajaja-popup-header jajaja-modal-header">
+        <div class="popup-background box popup draggable-popup">
+            <header class="modal-bg-header jajaja-popup-header jajaja-modal-header popup-header-draggable">
                 <div class="drag-handle"></div>
                 <div class="jajaja-header-btns">
                     <span class="jajaja-header-circle" onclick="closePopupToolsBg()" id="modal-bg-close"></span>
@@ -861,8 +802,8 @@
             </div>
         </div>
     </div>
-    <div class="popup-taqueria jajaja-draggable" id="popup-taqueria" onclick='bringToFront(this)'>
-        <header class="modal-bg-header jajaja-modal-header jajaja-popup-header">
+    <div class="popup popup-taqueria jajaja-draggable draggable-popup" id="popup-taqueria" onclick='bringToFront(this)'>
+        <header class="modal-bg-header jajaja-modal-header jajaja-popup-header popup-header-draggable">
             <div class="drag-handle"></div>
             <div class="jajaja-header-btns">
                 <span class="jajaja-header-circle" onclick="closePopupTaqueria()" id="modal-bg-close"></span>
@@ -876,14 +817,7 @@
               </div>
         </header>
         <div class="popup-taqueria-content">
-            <p>7, rue Lacharriere<br>
-                75011 PARIS <br>
-                SOIR <br>
-                mercredi - samedi <br>
-                18h30 - 1h <br>
-                MIDI <br>
-                samedi <br>
-                12h- 14h30</p>
+            <img src="./public/img/KODAK/popup-taqueria.png" alt="">
         </div>
     </div>
 
@@ -1425,52 +1359,86 @@ function openRecipe() {
         }
     </script>
 
-    <script>
-        // Fonction pour rendre un élément draggable
-        function makeHeaderDraggable(header) {
-            let isDragging = false;
-            let offsetX, offsetY;
-            const popup = header.parentElement;
+<script>
+function makeDraggable(element) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (element.querySelector(".popup-header-draggable")) {
+        element.querySelector(".popup-header-draggable").onmousedown = dragMouseDown;
+    } else {
+        element.onmousedown = dragMouseDown;
+    }
 
-            header.addEventListener("mousedown", (e) => {
-                isDragging = true;
-                offsetX = e.clientX - header.getBoundingClientRect().left;
-                offsetY = e.clientY - header.getBoundingClientRect().top;
-            });
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
 
-            document.addEventListener("mousemove", (e) => {
-                if (isDragging) {
-                    popup.style.left = (e.clientX - offsetX) + "px";
-                    popup.style.top = (e.clientY - offsetY) + "px";
-                }
-            });
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        element.style.top = (element.offsetTop - pos2) + "px";
+        element.style.left = (element.offsetLeft - pos1) + "px";
+    }
 
-            document.addEventListener("mouseup", () => {
-                isDragging = false;
-            });
-        }
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
 
-        // Rendre les headers avec la classe "jajaja-is-draggable" draggable
-        const draggableHeaders = document.querySelectorAll(".jajaja-is-draggable");
-        draggableHeaders.forEach((header) => {
-            makeHeaderDraggable(header);
-        });
-    </script>
+const popupsDraggable = document.querySelectorAll(".draggable-popup");
+
+popupsDraggable.forEach(makeDraggable);
+
+</script>
 
 <script>
-    function openPopup() {
-        window.open('votre_url', 'NomPopup', 'largeur=300,hauteur=200');
-      }
-      
-      element.addEventListener('click', function() {
-        clickCount++;
-      
-        if (clickCount >= 3) {
-          openPopup();
-          clickCount = 0;
-        }
-      });
+    // Récupérez les éléments du DOM
+const passwordInputs = document.getElementById("password");
+const errorMessagePopup = document.getElementById("popup-error-message");
+
+// Fonction pour afficher la popup d'erreur
+function displayErrorMessagePopup() {
+    errorMessagePopup.style.display = "block";
+}
+
+// Écoutez l'événement de clic sur le bouton "Envoyer"
+document.querySelector("#btn-send").addEventListener("click", function(event) {
+    // Empêchez le comportement par défaut du bouton (pour éviter que la page ne se recharge)
+    event.preventDefault();
+
+    // Vérifiez si l'input est rempli
+    if (passwordInputs.value.trim() !== "") {
+        // Si l'input est rempli, affichez la popup d'erreur
+        displayErrorMessagePopup();
+    }
+});
+
+// Récupérez l'élément du DOM pour le span "close-message"
+const closeMessageButton = document.getElementById("close-message");
+
+// Fonction pour fermer la popup d'erreur
+function closeErrorMessagePopup() {
+    errorMessagePopup.style.display = "none";
+}
+
+// Ajoutez un gestionnaire d'événements pour le clic sur le span "close-message"
+closeMessageButton.addEventListener("click", function() {
+    closeErrorMessagePopup();
+});
+
+
 </script>
+
+
 
     
     

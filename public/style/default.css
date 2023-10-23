@@ -9710,6 +9710,7 @@ html {
 
 body {
   width: 100%;
+  overflow: hidden;
   background-color: #d72547; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
@@ -10024,6 +10025,41 @@ input[type="range"]::-webkit-slider-thumb {
       .jajaja-desktop-icons-2 .jajaja-icons .jajaja-icon #jajaja-icon-avocat-text {
         width: 50%; }
 
+.jajaja-dektop-icons-3 {
+  display: block;
+  position: absolute;
+  top: 85vh; }
+  .jajaja-dektop-icons-3 .jajaja-icons {
+    display: flex;
+    flex-direction: column; }
+    .jajaja-dektop-icons-3 .jajaja-icons .jajaja-icon {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 4vh; }
+      .jajaja-dektop-icons-3 .jajaja-icons .jajaja-icon .jajaja-icon-img {
+        text-align: center;
+        align-items: center;
+        height: 9vh;
+        width: 9rem; }
+        .jajaja-dektop-icons-3 .jajaja-icons .jajaja-icon .jajaja-icon-img .jajaja-icon-img-container {
+          margin: auto; }
+          .jajaja-dektop-icons-3 .jajaja-icons .jajaja-icon .jajaja-icon-img .jajaja-icon-img-container img {
+            max-width: 40%;
+            max-height: 40%;
+            cursor: pointer; }
+      .jajaja-dektop-icons-3 .jajaja-icons .jajaja-icon .jajaja-icon-name {
+        color: black !important;
+        font-family: "Helvetica Neue Bolderx2";
+        margin: auto;
+        width: 70px;
+        cursor: pointer; }
+        .jajaja-dektop-icons-3 .jajaja-icons .jajaja-icon .jajaja-icon-name p {
+          background-color: #FEFEE2;
+          font-size: 70% !important;
+          padding-top: 0.4vh; }
+
 .close-section {
   position: sticky;
   top: 1vh;
@@ -10146,35 +10182,29 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 10px;
   border: 2px solid black;
   background-color: white;
-  height: 30vh;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
   height: 40vh; }
-  #modal-que-wrapper p {
-    font-family: "JAJAJA";
-    margin: 2vh 5%; }
+  #modal-que-wrapper .modal-que-content {
+    margin: 2vh 0; }
 
 #modal-credit-wrapper {
   display: none;
   position: absolute;
   left: 40%;
   top: 40vh;
-  width: 25%;
   border-radius: 10px;
   border: 2px solid black;
   background-color: white;
-  height: 30vh;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-  height: 20vh; }
-  #modal-credit-wrapper p {
-    font-family: "JAJAJA";
-    margin: 2vh 5%; }
+  height: 30vh; }
+  #modal-credit-wrapper img {
+    max-width: 90%;
+    margin: 4vh 0; }
 
 .popup-taqueria {
   display: none;
   position: absolute;
   top: 20%;
   left: 5vh;
-  width: 25%;
   border-radius: 10px;
   border: 2px solid black;
   background-color: white;
@@ -10186,8 +10216,6 @@ input[type="range"]::-webkit-slider-thumb {
     font-family: 'JAJAJA';
     margin: 5vh 2rem;
     color: #e63329;
-    background-color: white;
-    font-weight: 700;
     line-height: 20px;
     padding: 3px;
     border-radius: 10px; }
@@ -10199,7 +10227,7 @@ input[type="range"]::-webkit-slider-thumb {
 #popup-pacman {
   display: none;
   position: absolute;
-  left: 40%;
+  left: 20%;
   top: 40vh;
   width: 25%;
   border-radius: 10px;
@@ -10218,12 +10246,16 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   left: 40%;
   top: 40vh;
-  width: 25%;
   border-radius: 10px;
   border: 2px solid black;
   background-color: white;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
-  height: 25vh; }
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important; }
+  #modal-book-wrapper img {
+    width: 80%; }
+  #modal-book-wrapper .modal-book-content {
+    background-color: #fff7c8;
+    margin: 3vh 5px;
+    padding: 10px; }
   #modal-book-wrapper p {
     font-family: 'JAJAJA'; }
 
@@ -10233,14 +10265,15 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 10px;
   font-family: 'JAJAJA';
   border: none;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  border: 2px solid #e63329; }
   .jajaja-button-book a {
     text-decoration: none;
-    color: #ffe4c4; }
+    color: #fff7c8; }
 
 .jajaja-button-book:hover {
   transform: scale(1.04);
-  background-color: #ffe4c4; }
+  background-color: #fff7c8; }
 
 .jajaja-button-book:hover a {
   color: #e63329; }
@@ -10806,6 +10839,10 @@ input[type="range"]::-webkit-slider-thumb {
   width: 100%;
   /* Ajuste la largeur de la div selon vos besoins */ }
 
+#instafeed-container a {
+  pointer-events: none;
+  cursor: default; }
+
 #popup-clock {
   width: 3.5rem;
   background-color: rgba(255, 255, 255, 0.9);
@@ -11044,60 +11081,65 @@ input[type="range"]::-webkit-slider-thumb {
 
 #popup-hit {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
-  width: 30%;
   border-radius: 10px;
   position: absolute;
   display: none;
   top: 20%;
-  height: 40vh;
+  width: 15%;
+  height: 60vh;
   left: 70%;
   z-index: 1;
   text-align: center;
-  padding: 1vh 2rem;
   background-color: white;
   font-family: 'JAJAJA';
-  color: #e63329;
-  border: 2px solid black; }
-  #popup-hit h1, #popup-hit .h1, #popup-hit h2, #popup-hit .h2, #popup-hit h3, #popup-hit .h3, #popup-hit h4, #popup-hit .h4, #popup-hit H5 {
+  border: 2px solid black;
+  color: #e63329; }
+  #popup-hit button {
+    border-radius: 10px;
+    margin-top: 4vh;
+    background-color: #e63329;
+    border: 2px solid #e63329;
+    width: 60%;
+    color: #fff7c8;
+    transition: all 0.3s ease; }
+  #popup-hit button:hover {
+    background-color: #fff7c8;
+    color: #e63329; }
+  #popup-hit header {
+    width: 100%;
+    border-bottom: 2px solid black;
+    height: 6vh; }
+    #popup-hit header .line-container {
+      width: 50% !important;
+      margin-left: 35%; }
+  #popup-hit h1, #popup-hit .h1, #popup-hit h2, #popup-hit .h2, #popup-hit h3, #popup-hit .h3, #popup-hit h4, #popup-hit .h4 {
     font-family: 'JAJAJA';
     text-align: center;
-    font-size: 280%; }
-  #popup-hit #error-message {
-    display: none;
-    background-color: #e63329;
-    color: white;
-    padding: 0.5vh 1rem;
-    border: 1px solid white;
-    cursor: pointer;
-    font-size: 140%;
-    border-radius: 2px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
-    z-index: 1000000; }
-  #popup-hit header {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-bottom: 3px solid black;
-    height: 5vh; }
-  #popup-hit form {
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
-    #popup-hit form input {
-      width: 50%;
-      margin: auto; }
-    #popup-hit form .taco-club-submit {
-      margin-top: 1vh;
-      background-color: #e63329;
-      border: none;
-      color: #fefee2;
-      font-size: 200%;
-      width: 30%;
-      border-radius: 5px;
-      transition: all 0.5s ease;
-      opacity: 1; }
-    #popup-hit form .taco-club-submit:hover {
-      opacity: 0.90;
-      transform: scale(1.02); }
+    font-size: 200%; }
+  #popup-hit .popup-content {
+    margin: 2vh 10px;
+    background-color: #fff7c8;
+    height: 50vh; }
+    #popup-hit .popup-content #password {
+      width: 70%;
+      border: none; }
+
+.popup-error-message {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  width: 100%;
+  display: none;
+  margin: 2vh 10px;
+  position: relative;
+  left: -0.2rem;
+  bottom: 15vh; }
+  .popup-error-message .error-message-content {
+    background-color: #fff7c8;
+    margin: 2vh 10px; }
+  .popup-error-message .line-container {
+    width: 70% !important;
+    margin-left: 15%; }
 
 .jajaja-recipes-recipe .jajaja-recipes-recipe-img img {
   width: 100%; }
