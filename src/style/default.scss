@@ -773,10 +773,16 @@ input[type="range"]::-webkit-slider-thumb {
    border: 2px solid black;
    background-color: white;
    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
-   height: 40vh;
+  //  height: 40vh;
 
    .modal-que-content{
-    margin: 2vh 0;
+    background-color: rgb(255, 247, 200);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    img{
+
+    }
    }
 
   }
@@ -791,10 +797,11 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 10px;
     border: 2px solid black;
     background-color: white;
-    height: 30vh;
     img{
-      max-width: 90%;
-      margin: 4vh 0;
+      max-width: 100%;
+      margin: 0;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
  
    }
@@ -812,16 +819,17 @@ input[type="range"]::-webkit-slider-thumb {
 
 
     .popup-taqueria-content{
-      text-align: left;
-      font-size: 150%;
       -webkit-text-stroke: 1px white;
       font-family: 'JAJAJA';
-      margin: 5vh 2rem;
+      margin: 2vh 0 0 0;
       color: #e63329;
       // background-color: rgb(255, 247, 200);
       line-height: 20px;
-      padding: 3px;
       border-radius: 10px;
+
+      img{
+        border-radius: 10px;
+      }
     }
 
   }
@@ -836,6 +844,7 @@ input[type="range"]::-webkit-slider-thumb {
         #popup-pacman{
           display: none;
           position: absolute;
+          overflow: none;
           left: 20%;
           top: 40vh;
           width: 25%;
@@ -853,6 +862,11 @@ input[type="range"]::-webkit-slider-thumb {
           iframe{
             height: 55vh;
           }
+
+          .popup-pacman-content{
+            overflow: hidden;
+            background-color: rgb(254, 245, 195);
+          }
        
          }
 
@@ -869,12 +883,15 @@ input[type="range"]::-webkit-slider-thumb {
           box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
 
           img{
-            width: 80%;
+            width: 100%;
           }
 
           .modal-book-content{
             background-color: rgb(255, 247, 200);
-            margin: 3vh 5px;
+            // margin: 3vh 5px;
+            // padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
             padding: 10px;
           }
 
@@ -1203,11 +1220,10 @@ input[type="range"]::-webkit-slider-thumb {
       // 2) MODAL RECIPE WRAPPER
 
       .modal-recipe-wrapper{
-        width: 80%;
+        width: 60%;
         position: absolute;
         top: 50vh;
         left: 50%;
-        height: 90vh;
         z-index: 1;
         color: #e63329 !important;
         display: none;
@@ -1234,14 +1250,14 @@ input[type="range"]::-webkit-slider-thumb {
 
         .modal-recipe-content iframe{
           width: 100%;
-          height: 80vh;
+          height: 90vh;
         }
       }
 
       // 3) MODAL SOCIAL WRAPPER
 
       .modal-social-wrapper{
-        width: 20%;
+        width: 40%;
         transform: translate(-50%, -50%);
         top: 40%;
         left: 80%;
@@ -1291,8 +1307,12 @@ input[type="range"]::-webkit-slider-thumb {
         justify-content: center;
 
         header{
-          height: 10vh;
+          height: 15vh;
           color: rgb(254, 245, 195);
+
+          h1{
+            font-size: 250%;
+          }
         }
 
         .playlist-container{
@@ -1301,7 +1321,7 @@ input[type="range"]::-webkit-slider-thumb {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 30vh;
+          height: 28.3vh;
 
           h2{
             font-size: 400%;
@@ -1741,10 +1761,7 @@ input[type="range"]::-webkit-slider-thumb {
         width: 100%; /* Ajuste la largeur de la div selon vos besoins */
       }
 
-      #instafeed-container a {
-        pointer-events: none;
-        cursor: default;
-    }
+ 
 
     // 2) POPUP CLOCK
 
@@ -1800,7 +1817,7 @@ input[type="range"]::-webkit-slider-thumb {
       -webkit-text-stroke:1px solid #fff;
       font-family: 'JAJAJA';
       text-align: center;
-      width: 30rem;
+      width: 15rem;
       z-index: 1;
       display: none;
       transform: translate(-50%,-50%);
@@ -1811,6 +1828,10 @@ input[type="range"]::-webkit-slider-thumb {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         height: 5vh;
+
+        .line{
+          width: 80%;
+        }
       }
 
       .jajaja-contact-content{
@@ -1953,6 +1974,18 @@ input[type="range"]::-webkit-slider-thumb {
 
     // 6) POPUP MUSIC
 
+    .spotify-player-closer{
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 30px; 
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Ombre prononcée en bas */
+
+    }
+
 
     .popup-music{
       display: block;
@@ -2005,15 +2038,23 @@ input[type="range"]::-webkit-slider-thumb {
       }
 
       .jajaja-music-soon-content{
-        height: 55vh;
+        height: 69vh;
+        margin: 0;
+        width: 100% !important;
         font-family: 'JAJAJA';
         text-align: center;
         font-size: 400%;
         color: #e63329;
+        background-color: red;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
 
         iframe{
-          height: 50vh;
-        }
+          height: 69vh;
+          width: 100%;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;        }
 
       }
 
@@ -2111,8 +2152,8 @@ input[type="range"]::-webkit-slider-thumb {
       position: absolute;
       display: none;
       top: 20%;
-      width: 15%;
-      height: 60vh;
+      width: 35%;
+      height: 70vh;
       left: 70%;
       z-index: 1;
       text-align: center;
@@ -2126,9 +2167,10 @@ input[type="range"]::-webkit-slider-thumb {
         margin-top: 4vh;
         background-color: #e63329;
         border:2px solid #e63329;
-        width: 60%;
+        width: 30%;
         color: rgb(255, 247, 200);
         transition: all 0.3s ease;
+        font-size: larger;
       }
 
       button:hover{
@@ -2142,8 +2184,7 @@ input[type="range"]::-webkit-slider-thumb {
         height: 6vh;
 
         .line-container{
-          width: 50% !important;
-          margin-left: 35%;
+          width: 90% !important;
         }
       }
       
@@ -2151,19 +2192,27 @@ input[type="range"]::-webkit-slider-thumb {
 
         font-family: 'JAJAJA';
         text-align: center;
-        font-size: 200%;
+        font-size: 700%;
 
       }
 
+      h5{
+
+        font-family: 'JAJAJA';
+        text-align: center;
+        font-size: 500%;
+      }
+
       .popup-content{
-        margin: 2vh 10px;
         background-color:rgb(255, 247, 200) ;
-        height: 50vh;
+        height: 60vh;
+        border-bottom: 2px solid black;
 
 
         #password{
           width: 70%;
           border: none;
+          height: 5vh;
 
         }
       }
@@ -2178,19 +2227,15 @@ input[type="range"]::-webkit-slider-thumb {
       display: none;
       margin: 2vh 10px;
       position: relative;
-      left: -0.2rem;
-      bottom: 15vh;
+      left: -0.5rem;
+      bottom: 35vh;
 
 
       .error-message-content{
         background-color:rgb(255, 247, 200) ;
         margin: 2vh 10px;
+        font-size: 200%;
       }
-
-        .line-container{
-          width: 70% !important;
-          margin-left: 15%;
-        }
 
     }
 

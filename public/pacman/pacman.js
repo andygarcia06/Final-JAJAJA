@@ -803,9 +803,9 @@ var PACMAN = (function () {
     
     function dialog(text) {
         ctx.fillStyle = "#FFFF00";
-        ctx.font      = "14px BDCartoonShoutRegular";
+        ctx.font      = "14px JAJAJA";
         var width = ctx.measureText(text).width,
-            x     = ((map.width * map.blockSize) - width) / 2;        
+            x     = ((map.width * map.blockSize) - width) / 1;        
         ctx.fillText(text, x, (map.height * 10) + 8);
     }
 

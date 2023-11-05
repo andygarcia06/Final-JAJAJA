@@ -200,10 +200,12 @@ function createSpotifyPlayer(playlist_uri) {
     document.body.appendChild(timesElement);
     timesElement.style.position = 'absolute'
     timesElement.style.zIndex = '500000000'
-    timesElement.style.width = '50rem !important';
+    timesElement.style.fontSize = '150%';
     timesElement.style.color = 'white';
-    timesElement.style.left = '95%'
+    timesElement.style.left = '3%';
+    timesElement.style.top = '3%'
     timesElement.style.cursor = 'pointer';
+    timesElement.classList.add('spotify-player-closer')
     
     timesElement.addEventListener('click',()=>{
       iframe.style.display = 'none'
