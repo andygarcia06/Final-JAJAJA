@@ -802,11 +802,11 @@ var PACMAN = (function () {
     }
     
     function dialog(text) {
-        ctx.fillStyle = "#FFFF00";
-        ctx.font      = "14px JAJAJA";
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font      = "26px JAJAJA";
         var width = ctx.measureText(text).width,
             x     = ((map.width * map.blockSize) - width) / 1;        
-        ctx.fillText(text, x, (map.height * 10) + 8);
+        ctx.fillText(text, x, (map.height * 6) + 0);
     }
 
     function soundDisabled() {

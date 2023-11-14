@@ -233,11 +233,11 @@ if (elements.length >= 3) {
     const troisiemeElement = elements[2];
 
     premierElement.addEventListener('click',() =>{
-      createSpotifyPlayer('2r53F197NVkiTlTjSpwkIC');
+      createSpotifyPlayer('1gi1UEW95ygwp1Hi9bNNTZ');
     });
 
     deuxiemeElement.addEventListener('click',() =>{
-      createSpotifyPlayer('1gi1UEW95ygwp1Hi9bNNTZ');
+      createSpotifyPlayer('2r53F197NVkiTlTjSpwkIC ');
     })
 
   

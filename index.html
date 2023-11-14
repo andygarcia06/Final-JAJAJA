@@ -7,7 +7,7 @@
 
     <!-- style -->
     <link rel="stylesheet" href="./public/style/default.css">
-    <title>Document</title>
+    <title>JAJAJA</title>
 
 
     <!-- FLATICONS -->
@@ -249,7 +249,7 @@
                     
                 </header>
                 <div class="modal-recipe-content  jajaja-modal-content">
-                <iframe src="./image-recipe.html" frameborder="0"></iframe>
+                <iframe src="./recipes.html" frameborder="0"></iframe>
                 </div>
 
             <div class="modal-recipe-howto-wrapper">
@@ -299,7 +299,7 @@
                       </div>
                 </header>
                 <div class="modal-que-content jajaja-modal-content">
-                    <img src="./public/img/KODAK/popup-que.png" alt="">
+                    <img src="./public/img/popups/QUE.jpeg" alt="">
                 </div>
                 <div class="modal-que-footer">
     
@@ -325,7 +325,7 @@
                       </div>
                 </header>
                 <div class="modal-credit-content jajaja-modal-content">
-                    <a href="https://fronthand.fr"><img src="./public/img/KODAK/popup-credit.png" alt=""></a>
+                    <a href="https://fronthand.fr"><img src="./public/img/popups/credit.jpeg" alt=""></a>
                 </div>
             </div>
 
@@ -481,19 +481,19 @@
                 </div>
             </div>
         </div>
-        <div class="popup-photo jajaja-draggable" id="popup-photo-1" onclick='bringToFront(this)'> 
+        <div class="popup-photo draggable-bin" id="popup-photo-1" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto1()">&times;</div>                   
             <img src="./public/img/KODAK/10.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
-        <div class="popup-photo jajaja-draggable" id="popup-photo-2" onclick='bringToFront(this)'> 
+        <div class="popup-photo draggable-bin" id="popup-photo-2" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto2()">&times;</div>                   
             <img src="./public/img/KODAK/16.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
-        <div class="popup-photo jajaja-draggable" id="popup-photo-3" onclick='bringToFront(this)'> 
+        <div class="popup-photo draggable-bin" id="popup-photo-3" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto3()">&times;</div>                   
             <img src="./public/img/KODAK/27.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
-        <div class="popup-photo jajaja-draggable" id="popup-photo-4" onclick='bringToFront(this)'> 
+        <div class="popup-photo draggable-bin" id="popup-photo-4" onclick='bringToFront(this)'> 
             <div class="close-popup-photo" onclick="closePopupPhoto4()">&times;</div>                   
             <img src="./public/img/KODAK/8.jpg" alt="" class="jajaja-corbeille-background-container">
         </div>
@@ -566,7 +566,7 @@
               </div>
         </header>
         <div class="modal-book-content jajaja-modal-content">
-            <img src="./public/img/KODAK/modal-book.png" alt="" srcset="">
+            <img src="./public/img/popups/livre.jpeg" alt="" srcset="">
             <button class="jajaja-button-book" ><a target="_blank" href=" https://www.fnac.com/a18279207/Olivier-Chini-Mexique-authentique">JE LE VEUX</a></button>
 
         </div>
@@ -588,7 +588,7 @@
                       </div>
                 </header>
                 <div class="modal-que-content jajaja-modal-content">
-                    <img src="./public/img/KODAK/popup-que.png" alt="">
+                    <img src="./public/img/popups/QUE.jpeg" alt="">
                 </div>
                 <div class="modal-que-footer">
     
@@ -641,8 +641,8 @@
                 <br>
                 <button id="btn-send">Envoyer</button>
 
-                <div class="popup error-message popup-error-message box" id="popup-error-message" onclick="bringToFront(this)">
-                    <header class="popup-header jajaja-modal-header" id="header-hit">
+                <div class="popup  error-message popup-error-message box" id="popup-error-message" onclick="bringToFront(this)">
+                    <header class="popup-header jajaja-modal-header popup-header-draggable" id="header-hit">
                         <div class="drag-handle"></div>
                         <div class="jajaja-header-btns">
                             <span class="jajaja-header-circle close-btn"  id="close-message"></span>
@@ -817,7 +817,7 @@
               </div>
         </header>
         <div class="popup-taqueria-content">
-            <img src="./public/img/KODAK/popup-taqueria.png" alt="">
+            <img src="./public/img/popups/taqueria.jpeg" alt="">
         </div>
     </div>
 
@@ -1438,6 +1438,60 @@ closeMessageButton.addEventListener("click", function() {
 
 </script>
 
+<script>
+    // Fonction pour rendre un élément draggable
+    function makeDraggable(element) {
+      let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  
+      // Fonction appelée lorsqu'on clique sur l'élément
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Obtient la position initiale du curseur
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // Ajoute des événements de souris au document
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+  
+      // Fonction appelée lorsqu'on déplace la souris
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Calcule la nouvelle position de l'élément
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // Déplace l'élément à la nouvelle position
+        element.style.top = (element.offsetTop - pos2) + "px";
+        element.style.left = (element.offsetLeft - pos1) + "px";
+      }
+  
+      // Fonction appelée lorsqu'on relâche le bouton de la souris
+      function closeDragElement() {
+        // Supprime les événements de souris du document
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+  
+      // Ajoute l'événement de clic pour démarrer le glisser-déposer
+      element.onmousedown = dragMouseDown;
+    }
+  
+    // Rend chaque élément avec la classe "draggable" draggable
+    const draggableElements = document.getElementsByClassName("draggable-bin");
+    for (const element of draggableElements) {
+      makeDraggable(element);
+    }
+  </script>
+  
+  <script>
+    document.getElementById('pacman-close-btn').addEventListener('click', function() {
+      window.close();
+    });
+  </script>
 
 
     
