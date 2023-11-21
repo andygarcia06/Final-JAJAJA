@@ -9713,6 +9713,9 @@ body {
   overflow: hidden;
   background-color: #d72547; }
 
+.jajaja-section-main {
+  overflow: hidden; }
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: 'JAJAJA'; }
 
@@ -10259,7 +10262,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: none;
   position: absolute;
   left: 40%;
-  top: 25vh;
+  top: 45vh;
   width: 30%;
   border-radius: 10px;
   border: 2px solid black;
@@ -11416,7 +11419,16 @@ input[type="range"]::-webkit-slider-thumb {
   .jajaja-desktop-icons-2 .jajaja-icon {
     position: relative;
     top: 0.1vh;
-    right: 3rem; }
+    right: 5rem; }
+
+  .jajaja-desktop-icons .jajaja-icon {
+    position: relative;
+    top: 0.1vh;
+    right: 2rem; }
+
+  .jajaja-dektop-icons-3 {
+    left: 20%;
+    bottom: 10vh; }
 
   .jajaja-dektop-game-icon {
     display: none; }
@@ -11478,6 +11490,12 @@ input[type="range"]::-webkit-slider-thumb {
     width: 90% !important;
     top: 10vh;
     left: 5%; }
+
+  .popup-music {
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    top: 5vh; }
 
   #modal-book-wrapper, #modal-que-wrapper, #modal-credit-wrapper {
     width: 90% !important;
